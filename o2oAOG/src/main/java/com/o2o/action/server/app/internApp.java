@@ -57,14 +57,15 @@ public class internApp extends DialogflowApp {
 		CommonUtil.printMapData(data);
 
 		simpleResponse
-				.setTextToSpeech("우리 회사의 기본정보 목록이야! 궁금한게 있으면 골라봐!  ")
-				.setDisplayText("우리 회사의 기본정보 목록이야! 궁금한게 있으면 골라봐!  ");
+				.setTextToSpeech("우리 회사의 기본정보 목록이야! 궁금한게 있으면 골라봐!")
+				.setDisplayText("우리 회사의 기본정보 목록이야! 궁금한게 있으면 골라봐!");
 
 		// 리스트를 보여줄 때 대사! -> 우리 회사의 기본정보 목록이야! 궁금한게 있으면 골라봐!
 		// 주소가 궁금하구나
 		// fallback 보류  --- 궁금쓰
 		rb.add(simpleResponse);
 
+		//코드수정 테스트 - 제현
 		rb.addSuggestions(suggestions.toArray(new String[suggestions.size()]));
 		return rb.build();
 	}
