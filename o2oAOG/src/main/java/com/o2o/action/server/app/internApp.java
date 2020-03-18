@@ -29,7 +29,7 @@ public class internApp extends DialogflowApp {
 		data.clear();
 		CommonUtil.printMapData(data);
 
-		simpleResponse.setTextToSpeech("안녕! 나는 오투오의 귀염둥이 오뚜야! 주식회사 오투오는 처음이지? 궁금한게 있으면 편하게 물어봐줘! 입력되지 않은 오투오의 정보는 곧 업데이트 될 예정이야!")
+		simpleResponse.setTextToSpeech("안녕! 나는 오투오의 귀염둥이 오뚜야!! 주식회사 오투오는 처음이지? 궁금한게 있으면 편하게 물어봐줘! 입력되지 않은 오투오의 정보는 곧 업데이트 될 예정이야!")
 				.setDisplayText("안녕! 나는 오투오의 귀염둥이 오뚜야! 주식회사 오투오는 처음이지? 궁금한게 있으면 편하게 물어봐줘! 입력되지 않은 오투오의 정보는 곧 업데이트 될 예정이야!")
 		;
 
