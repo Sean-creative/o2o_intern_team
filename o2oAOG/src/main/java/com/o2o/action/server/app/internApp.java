@@ -29,12 +29,12 @@ public class internApp extends DialogflowApp {
 		data.clear();
 		CommonUtil.printMapData(data);
 
-		simpleResponse.setTextToSpeech("안녕! 나는 오투오의 귀염둥이 오뚜야!! 주식회사 오투오는 처음이지? 궁금한게 있으면 편하게 물어봐줘! 입력되지 않은 오투오의 정보는 곧 업데이트 될 예정이야!")
+		simpleResponse.setTextToSpeech("안녕! 나는 오투오의 귀염둥이 오뚜야! 주식회사 오투오는 처음이지? 궁금한게 있으면 편하게 물어봐줘! 입력되지 않은 오투오의 정보는 곧 업데이트 될 예정이야!")
 				.setDisplayText("안녕! 나는 오투오의 귀염둥이 오뚜야! 주식회사 오투오는 처음이지? 궁금한게 있으면 편하게 물어봐줘! 입력되지 않은 오투오의 정보는 곧 업데이트 될 예정이야!")
 		;
 
 		basicCard
-				.setFormattedText("안녕하세요! 주식회사 오투오 입니다. 궁금하신점에 대해 마음껏 물어봐주세요!")
+				.setFormattedText("주식회사 오투오 알리미 오뚜에게 물어보세요")
 				.setImage(new Image().setUrl("https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/logo.jpg?alt=media&token=5ba71cb0-2de8-4b0a-a8b5-aa95ff90cbb6")
 						.setAccessibilityText("O2O"));
 
