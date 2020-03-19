@@ -28,15 +28,10 @@ https://docs.google.com/document/d/18NB3Qnrns7uDjsPgMIW9bxDr5c5iYVE9s7utx_BVrtw/
 <b>o2o's youtube -> </b>  [AI O2O](https://www.youtube.com/channel/UCIiFvxaahQA-rLP8KpkDM0w, "AI O2O")  _or_  [o2o Inc.]( https://www.youtube.com/channel/UC5aoj7JFJTeqwWzCbNQU7Dw, "o2o Inc.")</br>
 [<img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/README%2Fyoutube.png?alt=media&token=9b0859e5-c32f-47a3-9406-e9682b1fd590"  width="330px" height="130px" title="px(픽셀) 크기 설정" alt="google Docs">](https://www.youtube.com/channel/UCIiFvxaahQA-rLP8KpkDM0w)
 
-</br>
-
 <b>Google Assistant -> Docs -> Bulid -> Responses -> </b> [Docs](
 https://developers.google.com/assistant/conversational/responses, "google Docs") </br>
 [<img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/README%2F%EA%B5%AC%EA%B8%80%20%EC%96%B4%EC%8B%9C%EC%8A%A4%ED%84%B4%ED%8A%B8.png?alt=media&token=492e0dc1-e8ef-4c9d-91f4-8b81f8c47a9e"  width="330px" height="130px" title="px(픽셀) 크기 설정" alt="Docs">](https://developers.google.com/assistant/conversational/responses)
 
-</br>
-
 <b>our's Storage  -> </b> [Docs](
 https://console.firebase.google.com/project/o2o-intern-nfumup/storage/o2o-intern-nfumup.appspot.com/files~2F, "google Docs") </br>
 [<img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/README%2FFirebase.png?alt=media&token=745f0dc3-732a-48ea-80db-92ac7ddda960"  width="330px" height="130px" title="px(픽셀) 크기 설정" alt="Firebase">](https://console.firebase.google.com/project/o2o-intern-nfumup/storage/o2o-intern-nfumup.appspot.com/files~2F)
-
