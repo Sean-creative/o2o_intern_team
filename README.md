@@ -25,8 +25,7 @@ https://docs.google.com/document/d/18NB3Qnrns7uDjsPgMIW9bxDr5c5iYVE9s7utx_BVrtw/
 
 </br>
 
-<b>o2o's youtube -> </b>  [AI O2O](https://www.youtube.com/channel/UCIiFvxaahQA-rLP8KpkDM0w, "AI O2O") _or_  [o2o Inc.]
-( https://www.youtube.com/channel/UC5aoj7JFJTeqwWzCbNQU7Dw,"o2o Inc.")</br>
+<b>o2o's youtube -> </b>  [AI O2O](https://www.youtube.com/channel/UCIiFvxaahQA-rLP8KpkDM0w, "AI O2O")  _or_  [o2o Inc.]( https://www.youtube.com/channel/UC5aoj7JFJTeqwWzCbNQU7Dw, "o2o Inc.")</br>
 [<img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/README%2Fyoutube.png?alt=media&token=9b0859e5-c32f-47a3-9406-e9682b1fd590"  width="330px" height="130px" title="px(픽셀) 크기 설정" alt="google Docs">](https://www.youtube.com/channel/UCIiFvxaahQA-rLP8KpkDM0w)
 
 </br>
