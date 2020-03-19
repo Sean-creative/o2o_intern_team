@@ -16,6 +16,7 @@ import java.util.*;
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
 //테스트 -창선
+// 선우 수정 20/03/19
 public class internApp extends DialogflowApp {
 
 	BasicCard CreateCard(String input) {
