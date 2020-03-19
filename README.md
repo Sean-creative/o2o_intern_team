@@ -9,7 +9,7 @@
 
 
 
-__You can manage Intents, Entities and Fullfillment  -> __  [Dialogflow](https://dialogflow.cloud.google.com, "Dialogflow") 
+<b>You can manage Intents, Entities and Fullfillment  -> </b>  [Dialogflow](https://dialogflow.cloud.google.com, "Dialogflow")  </br>
 [<img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/README%2FDialogflow.png?alt=media&token=77f833f6-6d04-4cd7-a35c-95a8162b2137"  width="330px" height="130px" title="px(픽셀) 크기 설정" alt="Dialogflow">](https://dialogflow.cloud.google.com)
 
 
