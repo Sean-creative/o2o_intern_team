@@ -108,7 +108,7 @@ public class internApp extends DialogflowApp {
 		;
 
 		basicCard
-				.setFormattedText("주식회사 오투오 알리미 오뚜에게 물어보세요")
+				.setFormattedText("주식회사 오투오 알리미 오뚜에게 무엇이든지 물어보세요.")
 				.setImage(new Image().setUrl("https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/logo.jpg?alt=media&token=5ba71cb0-2de8-4b0a-a8b5-aa95ff90cbb6")
 						.setAccessibilityText("O2O"));
 
