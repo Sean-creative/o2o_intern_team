@@ -20,8 +20,8 @@
 </br>
 
 <b>This document is our scenario.  -> </b>  [google Docs](
-https://docs.google.com/document/d/18NB3Qnrns7uDjsPgMIW9bxDr5c5iYVE9s7utx_BVrtw/edit, "google Docs") </br>
-[<img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/README%2Fgoogle%20docs.png?alt=media&token=63d82794-b92e-4f3f-adfb-45adf24966b6"  width="330px" height="130px" title="px(픽셀) 크기 설정" alt="google Docs">](https://dialogflow.cloud.google.com)
+https://docs.google.com/document/d/18NB3Qnrns7uDjsPgMIW9bxDr5c5iYVE9s7utx_BVrtw/edit?usp=sharing, "google Docs") </br>
+[<img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/README%2Fgoogle%20docs.png?alt=media&token=63d82794-b92e-4f3f-adfb-45adf24966b6"  width="330px" height="130px" title="px(픽셀) 크기 설정" alt="google Docs">](https://docs.google.com/document/d/18NB3Qnrns7uDjsPgMIW9bxDr5c5iYVE9s7utx_BVrtw/edit?usp=sharing)
 
 </br>
 
