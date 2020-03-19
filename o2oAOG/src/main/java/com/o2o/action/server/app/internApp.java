@@ -19,8 +19,9 @@ import java.util.concurrent.ExecutionException;
 // 선우 수정 20/03/19
 public class internApp extends DialogflowApp {
 
-	BasicCard CreateCard(String input) {
+	BasicCard createCard(String input) {
 		BasicCard basicCard = new BasicCard();
+
 
 		if(input.equals("Address")) {
 			basicCard
@@ -73,7 +74,7 @@ public class internApp extends DialogflowApp {
 			basicCard
 					.setTitle("연락처")
 					.setFormattedText("Email : info@o2o.kr\n" +
-							"Tel : +82 70 4260 8310\n");
+							"Tel : +82 70 4260 8310\n")
 					.setButtons(
 							new ArrayList<Button>(
 									Arrays.asList(
@@ -132,75 +133,83 @@ public class internApp extends DialogflowApp {
 		CommonUtil.printMapData(data);
 
 		String input = CommonUtil.makeSafeString(request.getParameter("Information"));
+		simpleResponse.setDisplayText(input)
+		.setTextToSpeech(input);
+		rb.add(simpleResponse);
 
-		if(!CommonUtil.isEmptyString(input) && input.equals("Information") {
-			simpleResponse
-					.setTextToSpeech("우리 회사의 기본정보 목록이야! 궁금한게 있으면 골라봐!")
-					.setDisplayText("우리 회사의 기본정보 목록이야! 궁금한게 있으면 골라봐!");
-
-			selectionList = new SelectionList()
-					.setTitle("기본정보")
-					.setItems(
-							Arrays.asList(
-									new ListSelectListItem()
-											.setTitle("주소")
-											.setOptionInfo(
-													new OptionInfo()
-															.setKey("Address")),
-									new ListSelectListItem()
-											.setTitle("홈페이지")
-											.setOptionInfo(
-													new OptionInfo()
-															.setKey("Homepage")),
-									new ListSelectListItem()
-											.setTitle("연락처")
-											.setOptionInfo(
-													new OptionInfo()
-															.setKey("Contact")),
-									new ListSelectListItem()
-											.setTitle("설립일")
-											.setOptionInfo(
-													new OptionInfo()
-															.setKey("Established")),
-
-									new ListSelectListItem()
-											.setTitle("회사연혁 및 수상이력")
-											.setOptionInfo(
-													new OptionInfo()
-															.setKey("History"))
-
-							));
-		}
-		else if(!CommonUtil.isEmptyString(input) && input.equals("Address") || input.equals("Homepage") || input.equals("Contact") || input.equals("Established") || input.equals("Prize")) {
-			if(input.equals("Address")) {
-				simpleResponse
-						.setTextToSpeech("우리 회사 주소는 서울특별시 서초구 매헌로 팔길 사십 칠 번지, 양재 에이아이허브 희경빌딩 비동 이백 이호야!")
-			}
-			else if(input.equals("Homepage")) {
-				simpleResponse
-						.setTextToSpeech("우리 회사의 홈페이지야!")
-			}
-			else if(input.equals("Contact")) {
-				simpleResponse
-						.setTextToSpeech("우리 회사의 연락처야!")
-			}
-			else if(input.equals("Established")) {
-				simpleResponse
-						.setTextToSpeech("우리 회사의 설립일은 이천 십칠년 팔월 십육일이야!")
-			}
-			else if(input.equals("History")) {
-				simpleResponse
-						.setTextToSpeech("우리 회사의 연혁과 수상이력이야!")
-			}
-
-			basicCard = createCard(input);
-		}
+//		if(!CommonUtil.isEmptyString(input) && input.equals("Informations")) {
+//			simpleResponse
+//					.setTextToSpeech("우리 회사의 기본정보 목록이야! 궁금한게 있으면 골라봐!")
+//					.setDisplayText("우리 회사의 기본정보 목록이야! 궁금한게 있으면 골라봐!");
+//
+//			selectionList = new SelectionList()
+//					.setTitle("기본정보")
+//					.setItems(
+//							Arrays.asList(
+//									new ListSelectListItem()
+//											.setTitle("주소")
+//											.setOptionInfo(
+//													new OptionInfo()
+//															.setKey("Address")),
+//									new ListSelectListItem()
+//											.setTitle("홈페이지")
+//											.setOptionInfo(
+//													new OptionInfo()
+//															.setKey("Homepage")),
+//									new ListSelectListItem()
+//											.setTitle("연락처")
+//											.setOptionInfo(
+//													new OptionInfo()
+//															.setKey("Contact")),
+//									new ListSelectListItem()
+//											.setTitle("설립일")
+//											.setOptionInfo(
+//													new OptionInfo()
+//															.setKey("Established")),
+//
+//									new ListSelectListItem()
+//											.setTitle("회사연혁 및 수상이력")
+//											.setOptionInfo(
+//													new OptionInfo()
+//															.setKey("History"))
+//
+//							));
+//			rb.add(simpleResponse);
+//			rb.add(selectionList);
+//			//rb.add(basicCard);
+//		}
+//		else if(!CommonUtil.isEmptyString(input) && input.equals("Address") || input.equals("Homepage") || input.equals("Contact") || input.equals("Established") || input.equals("Prize")) {
+//			if(input.equals("Address")) {
+//				simpleResponse
+//						.setTextToSpeech("우리 회사 주소는 서울특별시 서초구 매헌로 팔길 사십 칠 번지, 양재 에이아이허브 희경빌딩 비동 이백 이호야!");
+//			}
+//			else if(input.equals("Homepage")) {
+//				simpleResponse
+//						.setTextToSpeech("우리 회사의 홈페이지야!");
+//			}
+//			else if(input.equals("Contact")) {
+//				simpleResponse
+//						.setTextToSpeech("우리 회사의 연락처야!");
+//			}
+//			else if(input.equals("Established")) {
+//				simpleResponse
+//						.setTextToSpeech("우리 회사의 설립일은 이천 십칠년 팔월 십육일이야!");
+//			}
+//			else if(input.equals("History")) {
+//				simpleResponse
+//						.setTextToSpeech("우리 회사의 연혁과 수상이력이야!");
+//			}
+//
+//			basicCard = createCard(input);
+//
+//			rb.add(simpleResponse);
+//			//rb.add(selectionList);
+//			rb.add(basicCard);
+//		}
 
 		// 주소가 궁금하구나
 		// fallback 보류  --- 궁금쓰
-		rb.add(simpleResponse);
-		rb.add(selectionList);
-		rb.add(basicCard);
+
 
 		rb.addSuggestions(suggestions.toArray(new String[suggestions.size()]));
 		return rb.build();
@@ -219,26 +228,22 @@ public class internApp extends DialogflowApp {
 
 		String input = CommonUtil.makeSafeString(request.getParameter("Information"));
 
-		if(!CommonUtil.isEmptyString(input) && input.equals("Address") || input.equals("Homepage") || input.equals("Contact") || input.equals("Established") || input.equals("Prize")) {
-			if(input.equals("Address")) {
+		if (!CommonUtil.isEmptyString(input) && input.equals("Address") || input.equals("Homepage") || input.equals("Contact") || input.equals("Established") || input.equals("Prize")) {
+			if (input.equals("Address")) {
 				simpleResponse
-						.setTextToSpeech("우리 회사 주소는 서울특별시 서초구 매헌로 팔길 사십 칠 번지, 양재 에이아이허브 희경빌딩 비동 이백 이호야!")
-			}
-			else if(input.equals("Homepage")) {
+						.setTextToSpeech("우리 회사 주소는 서울특별시 서초구 매헌로 팔길 사십 칠 번지, 양재 에이아이허브 희경빌딩 비동 이백 이호야!");
+			} else if (input.equals("Homepage")) {
 				simpleResponse
-						.setTextToSpeech("우리 회사의 홈페이지야!")
-			}
-			else if(input.equals("Contact")) {
+						.setTextToSpeech("우리 회사의 홈페이지야!");
+			} else if (input.equals("Contact")) {
 				simpleResponse
-						.setTextToSpeech("우리 회사의 연락처야!")
-			}
-			else if(input.equals("Established")) {
+						.setTextToSpeech("우리 회사의 연락처야!");
+			} else if (input.equals("Established")) {
 				simpleResponse
-						.setTextToSpeech("우리 회사의 설립일은 이천 십칠년 팔월 십육일이야!")
-			}
-			else if(input.equals("History")) {
+						.setTextToSpeech("우리 회사의 설립일은 이천 십칠년 팔월 십육일이야!");
+			} else if (input.equals("History")) {
 				simpleResponse
-						.setTextToSpeech("우리 회사의 연혁과 수상이력이야!")
+						.setTextToSpeech("우리 회사의 연혁과 수상이력이야!");
 			}
 
 			basicCard = createCard(input);
@@ -251,6 +256,7 @@ public class internApp extends DialogflowApp {
 
 		rb.addSuggestions(suggestions.toArray(new String[suggestions.size()]));
 		return rb.build();
+	}
 
 	@ForIntent("O2O_aog")
 	public ActionResponse browseCarousel(ActionRequest request) {
