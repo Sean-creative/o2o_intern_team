@@ -256,6 +256,8 @@ public class internApp extends DialogflowApp {
 		rb.add(basicCard);
 
 		rb.addSuggestions(suggestions.toArray(new String[suggestions.size()]));
+
+
 		return rb.build();
 	}
 
@@ -269,6 +271,7 @@ public class internApp extends DialogflowApp {
 					.add("Which response would you like to see next?")
 					.build();
 		}
+
 
 		responseBuilder
 				.add("우리가 만든 AOG는 이런게 있어. 궁금하지? 관심있는 AOG를 눌러봐! ")
