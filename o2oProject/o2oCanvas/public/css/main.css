@@ -1,0 +1,142 @@
+
+* reset *
+body {box-sizing: border-box;
+  margin:0px;
+  padding:0px;
+}
+
+
+  body > div:not(#hi)   {
+  display: none ; !important;
+}
+
+
+/* #hi, #greeting,#aog,#info { float:left;} */
+
+
+/* 선우 */
+#hi{
+  width:412px;
+  height:773;
+  position:relative;
+  display: flex;
+  justify-content :center;
+  align-items: center;
+}
+ #suggestion_chip_wrap2>div {border: 2px solid;
+ width:70px;
+ height:70px;
+ }
+
+
+
+
+ /* 창선 */
+  #greeting {
+    display: flex;
+    justify-content :center;
+    align-items: center;
+     width:412;
+     height:773;
+     color:red;
+     position:relative;
+  }
+
+   .bg {
+     width: 200px;
+     height: 250px;
+     /* top:56px; */
+     position: relative;
+     background-size: cover;
+     z-index: 1;
+   }
+
+   #chip1 {
+     width: 73px;
+     height: 73px;
+     top: -78px;
+     left: 10px;
+     position: relative;
+     z-index: 2;
+   }
+
+
+
+
+
+
+  /* 혜원 */
+   #aog {
+     width:412;
+     height:773;
+     position:relative;
+   }
+   #square{
+     display:flex;
+     justify-content:center;
+     margin:20px;
+     background-color:white;
+     width:372;
+     height:400;
+     overflow:scroll;
+     position:absolute;
+     top:130;
+   }
+   #aog_list{
+     width:300;
+     height:70;
+     font-size: 25;
+     color:black;
+     text-align: center;
+     margin-top:40;
+     display: flex;
+     flex-flow: column;
+     -webkit-flex-flow:column;
+   }
+   #aog_list > iframe{
+     display: flex;
+     justify-content:center;
+     -webkit-justify-content:center;
+     border:solid 3px red;
+
+   }
+   #aog_list > p {
+     margin: 10;
+   }
+   #suggestion_chip_wrap{
+      width:412;
+      height:90;
+      position:absolute;
+      top:620;
+   }
+   #suggestion_chip{
+      display:flex;
+      justify-content:space-around;
+      margin:5px;
+   }
+   #suggestion_chip > div{
+     width:90px;
+     height:90px;
+     line-height:90px;
+     text-align:center;
+     margin:10px;
+   }
+   #oddu{
+     position:absolute;
+     left:10;
+     top:370;
+     width:200;
+     height:250;
+   }
+
+
+
+ /* 제현 */
+   #info {
+     width:412;
+     height:773;
+     position:relative;
+     display: flex;
+     justify-content :center;
+     align-items: center;
+   }

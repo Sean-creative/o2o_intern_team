@@ -1,0 +1,203 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=0.5">
+  <title> 오뚜 프로젝트 </title>
+  <link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;,">
+
+  <script src="https://www.gstatic.com/assistant/interactivecanvas/api/interactive_canvas.min.js"></script>
+</head>
+  <link rel="stylesheet" href="css/main.css">
+<body style="margin:0px;">
+<!-- onload="onLoadHandler()" onresize="onLoadHandler()" -->
+
+
+
+<!-- margin:-10 -8; -->
+  <div id="hi" >
+    <img src="배경1.png" width="100%" height="100%">
+
+    <div id="oddu2" style="position:absolute; bottom:90; width:300; height:400;  ">
+      <img src="오뚜.png" width="100%" height="100%">
+    </div>
+
+    <div id="말풍선1" style="position:absolute;  top:110;  width:370;  height:230; display: flex;  justify-content :center;">
+      <img src="말풍선.png" width="100%" height="100%" />
+
+      <div id="suggestion_chip_wrap2" style="width:370px; height:230px; top:27; position:absolute; display:flex; justify-content:space-around; ">
+        <div>
+          <a href="https://www.naver.com"><img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Fhome.png?alt=media&token=6a757192-0204-4208-a25e-0552117accc0" width="100%" height="100%" /></a>
+        </div>
+        <div>
+          <a href="https://www.naver.com"><img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Fo2o.png?alt=media&token=fd1c6e76-a9a3-43b0-903e-186f7dd29b2a" width="100%" height="100%" /></a>
+        </div>
+        <div>
+          <a href="https://www.naver.com"><img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Faog.png?alt=media&token=69095505-0125-4b4a-a569-3d88198c0eb0" width="100%" height="100%" /></a>
+        </div>
+        <div>
+          <a href="https://www.naver.com"><img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Finfo.png?alt=media&token=4067b881-ddbc-4e7e-bb6b-31473c04b330" width="100%" height="100%" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="greeting" class="bg">
+    <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/%EB%B0%B0%EA%B2%BD2.png?alt=media&token=46d5e9d7-43eb-4538-b238-d530445c9d71" height="100%" width="100%">
+    <div id="oddu" style="position:absolute; bottom: 30; width:400; height:200; left: 0; ">
+     <img src="책상.png" width="100%" height="100%">
+   </div>
+   <div style="position:absolute; bottom:230; width:40; height:70; left: 120; ">
+     <img src="마이크.png" width="100%" height="100%">
+   </div>
+   <div id="book" style="position:absolute; top: 70; width:100; height:200; left: 40; ">
+     <img src="책.png" width="100%" height="100%">
+   </div>
+
+   <div id="suggestion_chip_wrap" style="width: 412px; height: 70px; bottom: 27; position:absolute; display:flex; justify-content:space-around; ">
+     <div>
+       <input type="image" name="button" src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Fhome.png?alt=media&token=6a757192-0204-4208-a25e-0552117accc0" width="100%" height="100%" onclick="buttons('clho','home')" id ='clho'>
+     </div>
+     <div>
+       <input type="image" name="button" src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Fo2o.png?alt=media&token=fd1c6e76-a9a3-43b0-903e-186f7dd29b2a" width="100%" height="100%" onclick="buttons('clgr','greeting')" id ='clgr'>
+     </div>
+     <div>
+       <input type="image" name="button" src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Faog.png?alt=media&token=69095505-0125-4b4a-a569-3d88198c0eb0" width="100%" height="100%" onclick="buttons('clao','aog')" id ='clao'>
+     </div>
+     <div>
+       <input type="image" name="button" src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Finfo.png?alt=media&token=4067b881-ddbc-4e7e-bb6b-31473c04b330" width="100%" height="100%" onclick="buttons('clin','info')" id ='clin'>
+     </div>
+   </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="aog">
+        <img src="배경2.png" height="100%" width="100%">
+        <div id="square" style="display:flex; justify-content:center; margin:20px; background-color:white;  width:372; height:400; overflow:scroll; position:absolute; top:130">
+          <dl>
+            <dd id="aog_list">
+           <iframe width="280" height="250" src="https://www.youtube.com/embed/rKXsoWQZz3o"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           <p>
+             first AOG
+           </p>
+         </dd>
+         <dd id="aog_list">
+           <iframe width="280" height="250" src="https://www.youtube.com/embed/Fo3_HR7Ryfg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>
+            second AOG
+          </p>
+         </dd>
+         <dd id="aog_list">
+           <iframe width="280" height="250" src="https://www.youtube.com/embed/a8rKQ2b3cMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>
+            third AOG
+          </p>
+         </dd>
+         <dd id="aog_list">
+           <iframe width="280" height="250" src="https://www.youtube.com/embed/tcBKO2P-AQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>
+            fourth AOG
+          </p>
+         </dd>
+         <dd id="aog_list">
+           <embed width="280" height="250" src="https://www.youtube.com/v/8WO6KlAidCc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></embed>
+          <p>
+            fifth AOG
+          </p>
+         </dd>
+         <div style="width:300; height:200; background-color:white;">
+         </div>
+       </dl>
+     </div>
+     <div id="oddu">
+       <img title="oddu" src="오뚜.png" height="100%" width="100%">
+       </div>
+       <div id="suggestion_chip_wrap">
+         <div id="suggestion_chip">
+           <div>
+             <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Fhome.png?alt=media&token=6a757192-0204-4208-a25e-0552117accc0" width="100%" height="100%" />
+           </div>
+           <div>
+             <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Fo2o.png?alt=media&token=fd1c6e76-a9a3-43b0-903e-186f7dd29b2a" width="100%" height="100%" />
+         </div>
+         <div>
+           <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Faog.png?alt=media&token=69095505-0125-4b4a-a569-3d88198c0eb0" width="100%" height="100%" />
+       </div>
+       <div>
+         <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Finfo.png?alt=media&token=4067b881-ddbc-4e7e-bb6b-31473c04b330" width="100%" height="100%" />
+     </div>
+       </div>
+   </div>
+ </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="info" >
+    <img src="background3.png" width="100%" height="100%">
+    <div id="oddu2" style="position:absolute; top:50; width:300; height:400;  ">
+      <img src="오뚜.png" width="100%" height="100%">
+    </div>
+
+    <div style="position:absolute; bottom:150; width:380; height:280;  ">
+     <img src="folder.png" width="100%" height="100%"  >
+   </div>
+
+   <div style="position:absolute; bottom:270; width:380; height:140;  display: flex;  justify-content :center;  align-items: center;">
+     <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Faddress.png?alt=media&token=d86117d0-c72a-4c10-bc29-5d2fe5db3456" style="top:-280; width:100; height:100; margin:3px;">
+     <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Fprize.png?alt=media&token=75d4ec5d-abcf-4667-87ee-9b01849d7c70" style="top:-280; width:100; height:100; margin:3px;">
+     <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Festablish.png?alt=media&token=4f247c8b-6af7-48f8-b029-1f01b7817197" style="top:-280; width:100; height:100; margin:3px;">
+   </div>
+   <div style="position:absolute; bottom:160; width:380; height:140;  display: flex;  justify-content :center;  align-items: center;">
+     <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Fhomepage.png?alt=media&token=b56589c5-108b-4b33-be39-b06a568e75d2" style="top:-280; width:100; height:100; margin:3px;">
+     <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Fcontact.png?alt=media&token=9a30b35c-6316-4dfd-98fd-781f32e30876" style="top:-280; width:100; height:100; margin:3px;">
+   </div>
+
+   <div id="suggestion_chip_wrap" style="width:412; height:90; position:absolute; top:650;">
+       <div id="suggestion_chip" style="display:flex; justify-content:space-around; margin:5px;">
+         <div style="width:90px; height:90px; line-height:90px; text-align:center; margin:10px;">
+           <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Fhome.png?alt=media&token=6a757192-0204-4208-a25e-0552117accc0" width="100%" height="100%" onclick=homeButton()/>
+         </div>
+         <div style="width:90px; height:90px; line-height:90px; text-align:center; margin:10px;">
+           <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Fo2o.png?alt=media&token=fd1c6e76-a9a3-43b0-903e-186f7dd29b2a" width="100%" height="100%" onclick=o2oButton()/>
+         </div>
+         <div style="width:90px; height:90px; line-height:90px; text-align:center; margin:10px;">
+           <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Faog.png?alt=media&token=69095505-0125-4b4a-a569-3d88198c0eb0" width="100%" height="100%" onclick=aogButton()/>
+         </div>
+         <div style="width:90px; height:90px; line-height:90px; text-align:center; margin:10px;">
+           <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Finfo.png?alt=media&token=4067b881-ddbc-4e7e-bb6b-31473c04b330" width="100%" height="100%" onclick=infoButton()/>
+         </div>
+     </div>
+   </div>
+ </div>
+
+
+
+
+
+ <script src="js/main.js"></script>
+ <script src="js/action.js"></script>
+
+</body>
+</html>

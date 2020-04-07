@@ -272,7 +272,7 @@ public class internApp extends DialogflowApp {
 		}
 
 		responseBuilder
-				.add("우리가 만든 AOG는 이런게 있어. 궁금하지? 관심있는 AOG를 눌러봐! ")
+				.add("우리가 만든 AOG는 이런게 있어.   궁금하지? 관심있는 AOG를 눌러봐! ")
 				.add(
 						new CarouselBrowse()
 								.setItems(
@@ -289,6 +289,76 @@ public class internApp extends DialogflowApp {
 																				.setAccessibilityText("Image alternate text"))
 																.setFooter("(주)오투오"),
 														new CarouselBrowseItem()
+																.setTitle("국민연금 서비스")
+																.setDescription(" ")
+																.setOpenUrlAction(new OpenUrlAction().setUrl("https://www.youtube.com/watch?v=aeZ8t4gvH8w&t=1s"))
+																.setImage(
+																		new Image()
+																				.setUrl(
+																						"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/AOG%20%EC%86%8C%EA%B0%9C%20%EC%82%AC%EC%A7%84%ED%8C%8C%EC%9D%BC%2F%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%20%EC%84%9C%EB%B9%84%EC%8A%A4%20AOG.png?alt=media&token=7dd62fd5-ca98-4783-8d97-6bf8316c3235")
+																				.setAccessibilityText("Image alternate text"))
+																.setFooter("(주)오투오"),
+														new CarouselBrowseItem()
+																.setTitle("제사키 징글")
+																.setDescription(" ")
+																.setOpenUrlAction(new OpenUrlAction().setUrl("https://www.youtube.com/watch?v=R5parcsNLSw"))
+																.setImage(
+																		new Image()
+																				.setUrl(
+																						"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/AOG%20%EC%86%8C%EA%B0%9C%20%EC%82%AC%EC%A7%84%ED%8C%8C%EC%9D%BC%2F%EC%A0%9C%EC%82%AC%ED%82%A4%20%EC%A7%95%EA%B8%80%20AOG.png?alt=media&token=4f48cad6-8fd6-4331-86b7-06dfa0a9c1c0")
+																				.setAccessibilityText("Image alternate text"))
+																.setFooter("(주)오투오"),
+														new CarouselBrowseItem()
+																.setTitle("이명수")
+																.setDescription(" ")
+																.setOpenUrlAction(new OpenUrlAction().setUrl("https://www.youtube.com/watch?v=SVAMAgwO_gE"))
+																.setImage(
+																		new Image()
+																				.setUrl(
+																						"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/AOG%20%EC%86%8C%EA%B0%9C%20%EC%82%AC%EC%A7%84%ED%8C%8C%EC%9D%BC%2F%EC%9D%B4%EB%AA%85%EC%88%98%20AOG.png?alt=media&token=7c335599-df44-4fab-8563-ba8b741a65a4")
+																				.setAccessibilityText("Image alternate text"))
+																.setFooter("(주)오투오"),
+														new CarouselBrowseItem()
+																.setTitle("도담도담")
+																.setDescription(" ")
+																.setOpenUrlAction(new OpenUrlAction().setUrl("https://www.youtube.com/watch?v=DDUucnlfW6o&t=28s"))
+																.setImage(
+																		new Image()
+																				.setUrl(
+																						"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/AOG%20%EC%86%8C%EA%B0%9C%20%EC%82%AC%EC%A7%84%ED%8C%8C%EC%9D%BC%2F%EB%8F%84%EB%8B%B4%EB%8F%84%EB%8B%B4.png?alt=media&token=17729373-9375-4c47-bc77-e3ade8d10e7a")
+																				.setAccessibilityText("Image alternate text"))
+																.setFooter("(주)오투오"),
+														new CarouselBrowseItem()
+																.setTitle("강한희망용기데모")
+																.setDescription(" ")
+																.setOpenUrlAction(new OpenUrlAction().setUrl("https://www.youtube.com/watch?v=a8rKQ2b3cMc"))
+																.setImage(
+																		new Image()
+																				.setUrl(
+																						"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/AOG%20%EC%86%8C%EA%B0%9C%20%EC%82%AC%EC%A7%84%ED%8C%8C%EC%9D%BC%2F%EA%B0%95%ED%95%9C%ED%9D%AC%EB%A7%9D%EC%9A%A9%EA%B8%B0%EB%8D%B0%EB%AA%A8.png?alt=media&token=d8a40a59-ead0-4b98-8544-3d8c3aef63cb")
+																				.setAccessibilityText("Image alternate text"))
+																.setFooter("(주)오투오"),
+														new CarouselBrowseItem()
+																.setTitle("skylife")
+																.setDescription(" ")
+																.setOpenUrlAction(new OpenUrlAction().setUrl("https://www.youtube.com/watch?v=mEew7cm5I1I&t=37s"))
+																.setImage(
+																		new Image()
+																				.setUrl(
+																						"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/AOG%20%EC%86%8C%EA%B0%9C%20%EC%82%AC%EC%A7%84%ED%8C%8C%EC%9D%BC%2Fskylife%20AOG.png?alt=media&token=64c2cb9e-082f-49f3-a69e-3cc600c923fd")
+																				.setAccessibilityText("Image alternate text"))
+																.setFooter("(주)오투오"),
+														new CarouselBrowseItem()
+																.setTitle("Telechips Eng")
+																.setDescription(" ")
+																.setOpenUrlAction(new OpenUrlAction().setUrl("https://www.youtube.com/watch?v=HyqA4SzFbls"))
+																.setImage(
+																		new Image()
+																				.setUrl(
+																						"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/AOG%20%EC%86%8C%EA%B0%9C%20%EC%82%AC%EC%A7%84%ED%8C%8C%EC%9D%BC%2FTelechips%20Eng%20AOG.png?alt=media&token=30f761f8-fb88-477f-97be-5a4a2e361407")
+																				.setAccessibilityText("Image alternate text"))
+																.setFooter("(주)오투오"),
+														new CarouselBrowseItem()
 																.setTitle("춘천 트립")
 																.setDescription(" ")
 																.setOpenUrlAction(new OpenUrlAction().setUrl("https://www.youtube.com/watch?v=tcBKO2P-AQQ"))
@@ -298,6 +368,69 @@ public class internApp extends DialogflowApp {
 																						"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/%EC%9D%B4%EB%AF%B8%EC%A7%80%20012.png?alt=media&token=6414fe80-dca0-4f32-baaf-03ff3039e17c")
 																				.setAccessibilityText("Image alternate text"))
 																.setFooter("(주)오투오")))));
+
+		return responseBuilder.build();
+	}
+
+	// [START df_java_ssml_demo]
+	@ForIntent("SSML")
+	public ActionResponse ssml(ActionRequest request) {
+		ResponseBuilder responseBuilder = getResponseBuilder(request);
+		responseBuilder.add(
+				"<speak>"
+						+ "Here are <say-as interpet-as=\"characters\">SSML</say-as> examples."
+						+ "Here is a buzzing fly "
+						+ "<audio src=\"https://actions.google.com/sounds/v1/animals/buzzing_fly.ogg\"></audio>"
+						+ "and here's a short pause <break time=\"800ms\"/>"
+						+ "</speak>");
+		return responseBuilder.build();
+	}
+
+	@ForIntent("Basic Card")
+	public ActionResponse basicCard(ActionRequest request) {
+		ResponseBuilder responseBuilder = getResponseBuilder(request);
+		if (!request.hasCapability(Capability.SCREEN_OUTPUT.getValue())) {
+			return responseBuilder
+					.add("Sorry, try ths on a screen device or select the phone surface in the simulator.")
+					.add("Which response would you like to see next?")
+					.build();
+		}
+
+		responseBuilder.add(
+				"<speak>"
+						+ "Here are <say-as interpet-as=\"characters\">SSML</say-as> examples."
+						+ "Here is a buzzing fly "
+						+ "<audio src=\"https://actions.google.com/sounds/v1/animals/buzzing_fly.ogg\"></audio>"
+						+ "and here's a short pause <break time=\"800ms\"/>"
+						+ "</speak>");
+
+		// Prepare formatted text for card
+		String text =
+				"Th\nis is a b\0Da<br>sic ca\13 r\10d.  Text \\in a \n</br>bas\\ic card  \uD83D\uDE03  can include \"quotes\" and\n"
+						+ "  __bold__, and ***bold itallic*** or ___strong emphasis___ as well as other\n"
+						+ "  things like line  \\nbreaks"; // Note the two spaces before '\n' required for
+		// a line break to be rendered in the card.
+		responseBuilder
+				.add("SSML 테스트")
+				.add(
+						new BasicCard()
+								.setTitle("Title: this is a title")
+								.setSubtitle("This is a subtitle")
+								.setFormattedText(text)
+								.setImage(
+										new Image()
+												.setUrl(
+														"https://storage.googleapis.com/actionsresources/logo_assistant_2x_64dp.png")
+												.setAccessibilityText("Image alternate text"))
+								.setImageDisplayOptions("CROPPED")
+								.setButtons(
+										new ArrayList<Button>(
+												Arrays.asList(
+														new Button()
+																.setTitle("This is a Button")
+																.setOpenUrlAction(
+																		new OpenUrlAction().setUrl("https://assistant.google.com"))))))
+				.add("Which response would you like to see next?");
 
 		return responseBuilder.build();
 	}

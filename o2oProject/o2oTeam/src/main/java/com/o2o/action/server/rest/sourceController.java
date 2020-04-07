@@ -12,28 +12,28 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.o2o.action.server.app.internApp;
+import com.o2o.action.server.app.sourceApp;
 import com.o2o.action.server.repo.CategoryRepository;
 import com.o2o.action.server.util.CommonUtil;
 
 @RestController
-public class internController {
-	private final internApp internApp;
+public class sourceController {
+	private final sourceApp sourceApp;
 
 	@Autowired
 	private CategoryRepository categoryRepository;
 
-	public internController() {
-		internApp = new internApp();
+	public sourceController() {
+		sourceApp = new sourceApp();
 	}
 
-	@RequestMapping(value = "/intern123", method = RequestMethod.POST)
+	@RequestMapping(value = "/source", method = RequestMethod.POST)
 	public @ResponseBody String processActions(@RequestBody String body, HttpServletRequest request,
 			HttpServletResponse response) {
 		String jsonResponse = null;
 		try {
 			System.out.println("request : " + body + "," + categoryRepository);
-			jsonResponse = internApp.handleRequest(body, CommonUtil.getHttpHeadersMap(request)).get();
+			jsonResponse = sourceApp.handleRequest(body, CommonUtil.getHttpHeadersMap(request)).get();
 			System.out.println("response : " + jsonResponse);
 		} catch (InterruptedException e) {
 			e.printStackTrace();

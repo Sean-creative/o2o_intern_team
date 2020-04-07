@@ -27,7 +27,7 @@ public class internController {
 		internApp = new internApp();
 	}
 
-	@RequestMapping(value = "/intern123", method = RequestMethod.POST)
+	@RequestMapping(value = "/intern", method = RequestMethod.POST)
 	public @ResponseBody String processActions(@RequestBody String body, HttpServletRequest request,
 			HttpServletResponse response) {
 		String jsonResponse = null;
@@ -43,4 +43,5 @@ public class internController {
 
 		return jsonResponse;
 	}
+
 }
