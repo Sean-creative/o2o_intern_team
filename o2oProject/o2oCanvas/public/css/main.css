@@ -6,12 +6,12 @@ body {box-sizing: border-box;
 }
 
 
-  body > div:not(#hi)   {
+  /* body > div:not(#hi)   {
   display: none ; !important;
-}
+} */
 
 
-/* #hi, #greeting,#aog,#info { float:left;} */
+#hi, #greeting,#aog,#info { float:left;}
 
 
 /* 선우 */
@@ -27,6 +27,12 @@ body {box-sizing: border-box;
  width:70px;
  height:70px;
  }
+
+
+
+
+
+
 
 
 
@@ -128,6 +134,10 @@ body {box-sizing: border-box;
      width:200;
      height:250;
    }
+
+
+
+
 
 
 
