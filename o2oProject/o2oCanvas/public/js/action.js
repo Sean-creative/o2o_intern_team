@@ -30,59 +30,46 @@ class Action {
     this.scene = scene;
     const that = this;
     this.commands = {
-      HI: function(data) {
-        console.log("command : " + data.command);
-        var con = document.getElementById("hi");
-        con.style.display = 'block';
-        con = document.getElementById("greeting");
-        con.style.display = 'none';
-        con = document.getElementById("aog");
-        con.style.display = 'none';
-        con = document.getElementById("info");
-        con.style.display = 'none';
+      HI:function(data) {
+        console.log("command : " + data.command + " test-2");
+        apply(data);
+
         // setLoadHandler("bg");
       },
 
-      GREETING: function(data) {
+      GREETING:function(data) {
         console.log("command : " + data.command);
-        var con = document.getElementById("greeting");
-        con.style.display = 'block';
-        con = document.getElementById("hi");
-        con.style.display = 'none';
-        con = document.getElementById("aog");
-        con.style.display = 'none';
-        con = document.getElementById("info");
-        con.style.display = 'none';
+        apply(data);
         // setLoadHandler("bg");
       },
 
-      AOG: function(data) {
+      AOG:function(data) {
         console.log("command : " + data.command);
-        var con = document.getElementById("aog");
-        setLoadHandler("bg");
-        con.style.display = 'block';
-        con = document.getElementById("hi");
-        con.style.display = 'none';
-        con = document.getElementById("greeting");
-        con.style.display = 'none';
-        con = document.getElementById("info");
-        // con.style.display = 'none';
+        apply(data);
+        // setLoadHandler("bg");
+
       },
 
-      INFO: function(data) {
+      INFO:function(data) {
         console.log("command : " + data.command);
-        var con = document.getElementById("info");
-        setLoadHandler("bg");
-        con.style.display = 'block';
-        con = document.getElementById("hi");
-        con.style.display = 'none';
-        con = document.getElementById("greeting");
-        con.style.display = 'none';
-        con = document.getElementById("aog");
-        con.style.display = 'none';
+        apply(data);
+        // setLoadHandler("bg");
+      },
+
+      INFOTEL:function(data) {
+        console.log("command : " + data.command);
+        apply(data);
+        // setLoadHandler("bg");
+      },
+
+      FALLBACK:function(data) {
+        console.log("command : " + data.command);
+        apply(data);
+        // setLoadHandler("bg");
       }
     };
   }
+
 
 
 
@@ -112,46 +99,5 @@ class Action {
     // register callbacks
     this.canvas.ready(callbacks);
     console.log("setCallbacks READY");
-  }
-}
-
-function getDisplayInfo() {
-  console.log("fdata : 2");
-
-  var size = {
-    width: window.innerWidth || document.body.clientWidth,
-    height: window.innerHeight || document.body.clientHeight
-  }
-  console.log("fdata : 3");
-  return size;
-}
-
-function onLoadHandler() {
-  var size = getDisplayInfo();
-  var bgs = document.getElementsByClassName("bg");
-  for (var i = 0; i < bgs.length; i++) {
-    var section1 = bgs.item(i);
-    section1.style.width = size.width;
-  }
-
-  var bg = document.getElementsByClassName("bg");
-  for (var i = 0; i < bgs.length; i++) {
-    var section1 = bgs.item(i);
-    section1.style.height = size.height - 56;
-  }
-}
-
-function setLoadHandler(data) {
-  var size = getDisplayInfo();
-  var bgs = document.getElementsByClassName(data);
-  for (var i = 0; i < bgs.length; i++) {
-    var section1 = bgs.item(i);
-    section1.style.width = size.width;
-  }
-
-  var bg = document.getElementsByClassName(data);
-  for (var i = 0; i < bgs.length; i++) {
-    var section1 = bgs.item(i);
-    section1.style.height = size.height - 56;
   }
 }

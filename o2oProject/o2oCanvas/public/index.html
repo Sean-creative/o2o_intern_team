@@ -6,37 +6,101 @@
   <link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;,">
 
   <script src="https://www.gstatic.com/assistant/interactivecanvas/api/interactive_canvas.min.js"></script>
-</head>
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+
   <link rel="stylesheet" href="css/main.css">
+
+
+  <script>
+    $('#address').click(function(){
+      $('#hi').hide();
+      $('#greeting').hide();
+      $('#aog').hide();
+      $('#info').hide();
+      $('#info_OPTION').show();
+      $('#addressDiv').show();
+      $('#prizeDiv').hide();
+      $('#establishDiv').hide();
+      $('#homepageDiv').hide();
+      $('#contactDiv').hide();
+    });
+    $('#prize').click(function(){
+      $('#hi').hide();
+      $('#greeting').hide();
+      $('#aog').hide();
+      $('#info').hide();
+      $('#info_OPTION').show();
+      $('#addressDiv').hide();
+      $('#prizeDiv').show();
+      $('#establishDiv').hide();
+      $('#homepageDiv').hide();
+      $('#contactDiv').hide();
+    });
+    $('#establish').click(function(){
+      $('#hi').hide();
+      $('#greeting').hide();
+      $('#aog').hide();
+      $('#info').hide();
+      $('#info_OPTION').show();
+      $('#addressDiv').hide();
+      $('#prizeDiv').hide();
+      $('#establishDiv').show();
+      $('#homepageDiv').hide();
+      $('#contactDiv').hide();
+    });
+    $('#homepage').click(function(){
+      $('#hi').hide();
+      $('#greeting').hide();
+      $('#aog').hide();
+      $('#info').hide();
+      $('#info_OPTION').show();
+      $('#addressDiv').hide();
+      $('#prizeDiv').hide();
+      $('#establishDiv').hide();
+      $('#homepageDiv').show();
+      $('#contactDiv').hide();
+    });
+    $('#contact').click(function(){
+      $('#hi').hide();
+      $('#greeting').hide();
+      $('#aog').hide();
+      $('#info').hide();
+      $('#info_OPTION').show();
+      $('#addressDiv').hide();
+      $('#prizeDiv').hide();
+      $('#establishDiv').hide();
+      $('#homepageDiv').hide();
+      $('#contactDiv').show();
+
+  </script>
+</head>
+
 <body style="margin:0px;">
 <!-- onload="onLoadHandler()" onresize="onLoadHandler()" -->
 
 
+  <div id="HI"  class="INTENT" >
+    <img src="image/HI/배경1.png" width="100%" height="100%">
 
-
-<!-- margin:-10 -8; -->
-  <div id="hi" >
-    <img src="image/hi/배경1.png" width="100%" height="100%">
-
-    <div id="oddu2" style="position:absolute; bottom:90; width:300; height:400;  ">
+    <div id="oddu_HI">
       <img src="image/오뚜.png" width="100%" height="100%">
     </div>
 
-    <div id="말풍선1" style="position:absolute;  top:110;  width:370;  height:230; display: flex;  justify-content :center;">
-      <img src="image/hi/말풍선.png" width="100%" height="100%" />
+    <div id="speechBubble_HI">
+      <img src="image/HI/말풍선.png" width="100%" height="100%" />
 
-      <div id="suggestion_chip_wrap2" style="width:370px; height:230px; top:27; position:absolute; display:flex; justify-content:space-around; ">
-        <div>
-          <a href="https://www.naver.com"><img src="image/chip_Home.png" width="100%" height="100%" /></a>
+      <div id="suggestionChip_HI">
+        <div class="chip">
+          <img src="image/chip_Home.png" onclick="sendWelcomeIntent()" width="100%" height="100%" />
         </div>
-        <div>
-          <a href="https://www.naver.com"><img src="image/chip_Greeting.png" width="100%" height="100%" /></a>
+        <div class="chip">
+          <img src="image/chip_Greeting.png" onclick="sendGreetingIntent()" width="100%" height="100%" />
         </div>
-        <div>
-          <a href="https://www.naver.com"><img src="image/chip_Aog.png" width="100%" height="100%" /></a>
+        <div class="chip">
+          <img src="image/chip_Aog.png" onclick="sendAogIntent()" width="100%" height="100%" />
         </div>
-        <div>
-          <a href="https://www.naver.com"><img src="image/chip_Info.png" width="100%" height="100%" /></a>
+        <div class="chip">
+          <img src="image/chip_Info.png" onclick="sendInfoIntent()" width="100%" height="100%" />
         </div>
       </div>
     </div>
@@ -47,34 +111,43 @@
 
 
 
+  <div id="GREETING" class="INTENT">
+    <img src="image/GREETING/배경2.png" height="100%" width="100%">
 
-
-  <div id="greeting" class="bg">
-    <img src="image/greeting/배경2.png" height="100%" width="100%">
-    <div id="oddu" style="position:absolute; bottom: 30; width:400; height:200; left: 0; ">
-     <img src="image/greeting/책상.png" width="100%" height="100%">
-   </div>
-   <div style="position:absolute; bottom:230; width:40; height:70; left: 120; ">
-     <img src="image/greeting/마이크.png" width="100%" height="100%">
-   </div>
-   <div id="book" style="position:absolute; top: 70; width:100; height:200; left: 40; ">
-     <img src="image/greeting/책.png" width="100%" height="100%">
+    <div id="desk_GREETING">
+     <img src="image/GREETING/책상.png" width="100%" height="100%">
    </div>
 
-   <div id="suggestion_chip_wrap" style="width: 412px; height: 70px; bottom: 27; position:absolute; display:flex; justify-content:space-around; ">
-     <div>
-       <a href="https://www.naver.com"><img src="image/chip_Home.png" width="100%" height="100%" /></a>
-     </div>
-     <div>
-       <a href="https://www.naver.com"><img src="image/chip_Greeting.png" width="100%" height="100%" /></a>
-     </div>
-     <div>
-       <a href="https://www.naver.com"><img src="image/chip_Aog.png" width="100%" height="100%" /></a>
-     </div>
-     <div>
-       <a href="https://www.naver.com"><img src="image/chip_Info.png" width="100%" height="100%" /></a>
-     </div>
+  <div id="oddu_GREETING" >
+    <img src ="image/GREETING/oddu_GREETING.png" width="100%" height="100%" >
+  </div>
+
+   <div id="mike_GREETING">
+     <img src="image/GREETING/마이크.png" width="100%" height="100%">
    </div>
+
+   <div id="book_GREETING">
+     <img src="image/GREETING/책.png" width="100%" height="100%">
+   </div>
+
+<div id="ceo_GREETING">
+  <img src="image/GREETING/ceo.png" width="100%" height="100%" >
+</div>
+
+   <div id="suggestionChip">
+     <div class="chip">
+       <img src="image/chip_Home.png" onclick="sendWelcomeIntent()" width="100%" height="100%" />
+     </div>
+     <div class="chip">
+       <img src="image/chip_Greeting.png" onclick="sendGreetingIntent()" width="100%" height="100%" />
+     </div>
+     <div class="chip">
+       <img src="image/chip_Aog.png" onclick="sendAogIntent()" width="100%" height="100%" />
+     </div>
+     <div class="chip">
+       <img src="image/chip_Info.png" onclick="sendInfoIntent()" width="100%" height="100%" />
+     </div>
+     </div>
  </div>
 
 
@@ -83,122 +156,47 @@
 
 
 
-
-
-
-
-
-
-
-
-  <div id="aog">
-        <img src="image/aog/배경3.png" height="100%" width="100%">
-        <div id="square" style="display:flex; justify-content:center; margin:20px; background-color:white;  width:372; height:400; overflow:scroll; position:absolute; top:130">
-          <dl>
-            <dd id="aog_list">
-           <iframe width="280" height="250" src="https://www.youtube.com/embed/rKXsoWQZz3o"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-           <p>
-             first AOG
-           </p>
-         </dd>
-         <dd id="aog_list">
-           <iframe width="280" height="250" src="https://www.youtube.com/embed/Fo3_HR7Ryfg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p>
-            second AOG
-          </p>
-         </dd>
-         <dd id="aog_list">
-           <iframe width="280" height="250" src="https://www.youtube.com/embed/a8rKQ2b3cMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p>
-            third AOG
-          </p>
-         </dd>
-         <dd id="aog_list">
-           <iframe width="280" height="250" src="https://www.youtube.com/embed/tcBKO2P-AQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p>
-            fourth AOG
-          </p>
-         </dd>
-         <dd id="aog_list">
-           <embed width="280" height="250" src="https://www.youtube.com/v/8WO6KlAidCc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></embed>
-          <p>
-            fifth AOG
-          </p>
-         </dd>
-         <div style="width:300; height:200; background-color:white;">
-         </div>
-       </dl>
-     </div>
-     <div id="oddu">
-       <img title="oddu" src="image/오뚜.png" height="100%" width="100%">
-       </div>
-       <div id="suggestion_chip_wrap">
-         <div id="suggestion_chip">
-           <div>
-             <a href="https://www.naver.com"><img src="image/chip_Home.png" width="100%" height="100%" /></a>
-           </div>
-           <div>
-             <a href="https://www.naver.com"><img src="image/chip_Greeting.png" width="100%" height="100%" /></a>
-           </div>
-           <div>
-             <a href="https://www.naver.com"><img src="image/chip_Aog.png" width="100%" height="100%" /></a>
-           </div>
-           <div>
-             <a href="https://www.naver.com"><img src="image/chip_Info.png" width="100%" height="100%" /></a>
-           </div>
-       </div>
-   </div>
- </div>
- </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div id="info" >
-    <img src="background3.png" width="100%" height="100%">
-    <div id="oddu2" style="position:absolute; top:50; width:300; height:400;  ">
-      <img src="오뚜.png" width="100%" height="100%">
+  <div id="AOG" class="INTENT">
+        <img src="image/AOG/배경3.png" height="100%" width="100%">
+        <div id="square">
+      <dl>
+        <dd id="list1_AOG" class="list_AOG">
+          <iframe width="280" height="250" src="https://www.youtube.com/embed/rKXsoWQZz3o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </dd>
+        <dd id="list2_AOG" class="list_AOG">
+          <iframe width="280" height="250" src="https://www.youtube.com/embed/Fo3_HR7Ryfg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </dd>
+        <dd id="list3_AOG" class="list_AOG">
+          <iframe width="280" height="250" src="https://www.youtube.com/embed/a8rKQ2b3cMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </dd>
+        <dd id="list4_AOG" class="list_AOG">
+          <iframe width="280" height="250" src="https://www.youtube.com/embed/tcBKO2P-AQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </dd>
+        <dd id="list5_AOG" class="list_AOG">
+          <iframe width="280" height="250" src="https://www.youtube.com/embed/R5parcsNLSw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </dd>
+        <div style="width:300; height:150; background-color:white;">
+        </div>
+      </dl>
     </div>
 
-    <div style="position:absolute; bottom:150; width:380; height:280;  ">
-     <img src="folder.png" width="100%" height="100%"  >
-   </div>
-
-   <div style="position:absolute; bottom:270; width:380; height:140;  display: flex;  justify-content :center;  align-items: center;">
-     <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Faddress.png?alt=media&token=d86117d0-c72a-4c10-bc29-5d2fe5db3456" style="top:-280; width:100; height:100; margin:3px;">
-     <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Fprize.png?alt=media&token=75d4ec5d-abcf-4667-87ee-9b01849d7c70" style="top:-280; width:100; height:100; margin:3px;">
-     <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Festablish.png?alt=media&token=4f247c8b-6af7-48f8-b029-1f01b7817197" style="top:-280; width:100; height:100; margin:3px;">
-   </div>
-   <div style="position:absolute; bottom:160; width:380; height:140;  display: flex;  justify-content :center;  align-items: center;">
-     <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Fhomepage.png?alt=media&token=b56589c5-108b-4b33-be39-b06a568e75d2" style="top:-280; width:100; height:100; margin:3px;">
-     <img src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/info%2Fcontact.png?alt=media&token=9a30b35c-6316-4dfd-98fd-781f32e30876" style="top:-280; width:100; height:100; margin:3px;">
-   </div>
-
-   <div id="suggestion_chip_wrap" style="width:412; height:90; position:absolute; top:650;">
-       <div id="suggestion_chip" style="display:flex; justify-content:space-around; margin:5px;">
-         <div>
-           <a href="https://www.naver.com"><img src="image/chip_Home.png" width="100%" height="100%" /></a>
+     <div id="oddu_AOG">
+       <img title="oddu" src="image/오뚜.png" height="100%" width="100%">
+       </div>
+       <div id="suggestionChip">
+         <div class="chip">
+           <img src="image/chip_Home.png" onclick="sendWelcomeIntent()" width="100%" height="100%" />
          </div>
-         <div>
-           <a href="https://www.naver.com"><img src="image/chip_Greeting.png" width="100%" height="100%" /></a>
+         <div class="chip">
+           <img src="image/chip_Greeting.png" onclick="sendGreetingIntent()" width="100%" height="100%" />
          </div>
-         <div>
-           <a href="https://www.naver.com"><img src="image/chip_Aog.png" width="100%" height="100%" /></a>
+         <div class="chip">
+           <img src="image/chip_Aog.png" onclick="sendAogIntent()" width="100%" height="100%" />
          </div>
-         <div>
-           <a href="https://www.naver.com"><img src="image/chip_Info.png" width="100%" height="100%" /></a>
+         <div class="chip">
+           <img src="image/chip_Info.png" onclick="sendInfoIntent()" width="100%" height="100%" />
          </div>
-     </div>
-   </div>
+         </div>
  </div>
 
 
@@ -207,8 +205,146 @@
 
 
 
- <script src="js/main.js"></script>
- <script src="js/action.js"></script>
+  <div id="INFO" class="INTENT">
+    <img src="image/INFO/배경4.png" width="100%" height="100%">
+    <div id="oddu_INFO">
+      <img src="image/오뚜.png" width="100%" height="100%">
+    </div>
 
+
+    <div id="folder_INFO" >
+     <img src="image/INFO/folder.png" width="100%" height="100%"  >
+   </div>
+
+   <div id="information1_INFO">
+     <img src="image/INFO/address.png" style="top:-280; width:90; height:90; margin:10px;">
+     <img src="image/INFO/contact.png" style="top:-280; width:90; height:90; margin:10px;">
+     <img src="image/INFO/establish.png" style="top:-280; width:90; height:90; margin:10px;">
+   </div>
+
+   <div id="information2_INFO">
+     <img src="image/INFO/homepage.png" style="top:-280; width:90; height:90; margin:10px;">
+     <img src="image/INFO/prize.png" style="top:-280; width:90; height:90; margin:10px;">
+   </div>
+
+
+
+   <div id="suggestionChip">
+     <div class="chip">
+       <img src="image/chip_Home.png" onclick="sendWelcomeIntent()" width="100%" height="100%" />
+     </div>
+     <div class="chip">
+       <img src="image/chip_Greeting.png" onclick="sendGreetingIntent()" width="100%" height="100%" />
+     </div>
+     <div class="chip">
+       <img src="image/chip_Aog.png" onclick="sendAogIntent()" width="100%" height="100%" />
+     </div>
+     <div class="chip">
+       <img src="image/chip_Info.png" onclick="sendInfoIntent()" width="100%" height="100%" />
+     </div>
+     </div>
+ </div>
+
+
+
+
+
+
+
+ <div id="INFOTEL" class="INTENT">
+
+
+
+   <img src="image/INFO/배경4.png" width="100%" height="100%">
+   <div id="oddu_INFO">
+     <img src="image/오뚜.png" width="100%" height="100%">
+   </div>
+
+   <div id="folder_INFO" >
+    <img src="image/INFO/folder.png" width="100%" height="100%"  >
+
+
+  </div>
+
+  <div id="information1_INFO">
+    <img src="image/INFO/address.png" style="top:-280; width:90; height:90; margin:10px;">
+    <img src="image/INFO/contact.png" style="top:-280; width:90; height:90; margin:10px;">
+    <img src="image/INFO/establish.png" style="top:-280; width:90; height:90; margin:10px;">
+  </div>
+
+  <div id="information2_INFO">
+    <img src="image/INFO/homepage.png" style="top:-280; width:90; height:90; margin:10px;">
+    <img src="image/INFO/prize.png" style="top:-280; width:90; height:90; margin:10px;">
+  </div>
+
+
+
+
+
+  <div id="suggestionChip">
+    <div class="chip">
+      <img src="image/chip_Home.png" onclick="sendWelcomeIntent()" width="100%" height="100%" />
+    </div>
+    <div class="chip">
+      <img src="image/chip_Greeting.png" onclick="sendGreetingIntent()" width="100%" height="100%" />
+    </div>
+    <div class="chip">
+      <img src="image/chip_Aog.png" onclick="sendAogIntent()" width="100%" height="100%" />
+    </div>
+    <div class="chip">
+      <img src="image/chip_Info.png" onclick="sendInfoIntent()" width="100%" height="100%" />
+    </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="FALLBACK"  class="INTENT" >
+  <img src="image/FALLBACK/배경1.png" width="100%" height="100%">
+
+  <div id="oddu_FALLBACK">
+    <img src="image/FALLBACK/슬픈오뚜.png" width="100%" height="100%">
+  </div>
+
+  <div id="speechBubble_FALLBACK">
+    <img src="image/HI/말풍선.png" width="100%" height="100%" />
+
+    <div id="suggestionChip_FALLBACK">
+      <div class="chip">
+        <img src="image/chip_Home.png" onclick="sendWelcomeIntent()" width="100%" height="100%" />
+      </div>
+      <div class="chip">
+        <img src="image/chip_Greeting.png" onclick="sendGreetingIntent()" width="100%" height="100%" />
+      </div>
+      <div class="chip">
+        <img src="image/chip_Aog.png" onclick="sendAogIntent()" width="100%" height="100%" />
+      </div>
+      <div class="chip">
+        <img src="image/chip_Info.png" onclick="sendInfoIntent()" width="100%" height="100%" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+ <script src="js/action.js"></script>
+ <script src="js/main.js"></script>
 </body>
 </html>
