@@ -31,7 +31,9 @@ class Action {
     const that = this;
     this.commands = {
       HI:function(data) {
-        console.log("command : " + data.command + " test-2");
+        console.log("command : " + data.command);
+        console.log(" 변경한 시간은 1:20 이다.");
+
         apply(data);
 
         // setLoadHandler("bg");

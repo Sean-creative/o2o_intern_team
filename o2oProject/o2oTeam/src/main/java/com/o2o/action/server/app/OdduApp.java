@@ -19,7 +19,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
-public class internexApp extends DialogflowApp {
+public class OdduApp extends DialogflowApp {
+
+
 
 	@ForIntent("Default Welcome Intent")
 	public ActionResponse defaultWelcome(ActionRequest request) throws ExecutionException, InterruptedException {
@@ -49,8 +51,10 @@ public class internexApp extends DialogflowApp {
 	}
 
 
-	@ForIntent("O2O_greeting")
-	public ActionResponse O2O_greeting(ActionRequest request) throws ExecutionException, InterruptedException {
+
+
+	@ForIntent("GREETING")
+	public ActionResponse GREETING(ActionRequest request) throws ExecutionException, InterruptedException {
 		ResponseBuilder rb = getResponseBuilder(request);
 		SimpleResponse simpleResponse = new SimpleResponse();
 
@@ -61,21 +65,23 @@ public class internexApp extends DialogflowApp {
 
 		simpleResponse
 				.setTextToSpeech("<speak>"
-						+ "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2Fo2o_greeting1.mp3?alt=media&amp;token=917baaee-d8d9-4459-9d25-378100ea5c6a\"></audio>"
-						+ "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2Fo2o_greeting2.mp3?alt=media&amp;token=7e270873-f6d7-4f1d-bb66-0b6aaf396f9e\"></audio>"
-						+ "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2Fo2o_greeting3.mp3?alt=media&amp;token=ad3401a0-b5cd-4143-8ab8-9f03ee915ba3\"></audio>"
-						+ "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2Fo2o_greeting4.mp3?alt=media&amp;token=99316fa1-33b7-4c40-a92d-78060779bf4d\"></audio>"
+						+ "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2F%EC%98%A4%EB%9A%9C%EC%9D%98%20%EC%86%8C%EA%B0%9C.mp3?alt=media&amp;token=24a8462c-dae2-4276-bbce-3cd1de0f48cb\"></audio>"
+						+ "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2FCEO_greeting.mp3?alt=media&amp;token=99840ec1-ece4-4f11-9854-dd9b89a382a9\"></audio>"
 						+ "</speak>")
-				.setDisplayText("오투오의 인삿말입니다!");
-
+				//.setTextToSpeech("주식회사 오투오는 ai를 기반으로 한 음성인식 응용 디바이스 및 서비스를 제공하는 회사입니다. 오투오에서 만드는 서비스는 google assistant와 빅데이터를 기반으로 하기 때문에 사용자에 따라 최상의 답변을 제공할 수 있습니다. 주요 서비스로는 대화형 관광안내, 행정정보 등이 있습니다. 궁금하시다면 아래의 유투브 링크를 클릭해보세요.")
+				.setDisplayText("우리 회사의 안성민 대표님이 잘 소개해주실꺼야!");
 
 		data.put("command", "GREETING");
 			return rb.add(simpleResponse).add(new HtmlResponse().setUpdatedState(data)).build();
 		}
 
 
-	@ForIntent("O2O_aog")
-	public ActionResponse O2O_aog(ActionRequest request) throws ExecutionException, InterruptedException {
+
+
+
+
+	@ForIntent("AOG")
+	public ActionResponse AOG(ActionRequest request) throws ExecutionException, InterruptedException {
 		ResponseBuilder rb = getResponseBuilder(request);
 		SimpleResponse simpleResponse = new SimpleResponse();
 
@@ -90,13 +96,16 @@ public class internexApp extends DialogflowApp {
 				.setDisplayText("오투오의 aog입니다!");
 
 		data.put("command", "AOG");
-		data.put("SO", "SO SAD");
 		return rb.add(simpleResponse).add(new HtmlResponse().setUpdatedState(data)).build();
 	}
 
 
-	@ForIntent("O2O_info")
-	public ActionResponse O2O_info(ActionRequest request) throws ExecutionException, InterruptedException {
+
+
+
+
+	@ForIntent("INFO")
+	public ActionResponse INFO(ActionRequest request) throws ExecutionException, InterruptedException {
 		ResponseBuilder rb = getResponseBuilder(request);
 		SimpleResponse simpleResponse = new SimpleResponse();
 
@@ -106,11 +115,55 @@ public class internexApp extends DialogflowApp {
 		CommonUtil.printMapData(data);
 
 		data.put("command", "INFO");
-		data.put("SO", "SO SAD");
 		return rb.add(new SimpleResponse().setTextToSpeech("INFO입니다")).add(new HtmlResponse().setUpdatedState(data)).build();
 
 	}
 
+
+
+
+
+	@ForIntent("INFOTEL")
+	public ActionResponse INFO_TEL(ActionRequest request) throws ExecutionException, InterruptedException {
+		ResponseBuilder rb = getResponseBuilder(request);
+		SimpleResponse simpleResponse = new SimpleResponse();
+
+		Map<String, Object> data = rb.getConversationData();
+
+		data.clear();
+		CommonUtil.printMapData(data);
+
+		data.put("command", "INFOTEL");
+		return rb.add(new SimpleResponse().setTextToSpeech("INFOTEL입니다")).add(new HtmlResponse().setUpdatedState(data)).build();
+
+
+	}
+
+
+
+
+
+	@ForIntent("Default Fallback Intent")
+	public ActionResponse defaultFallback(ActionRequest request) throws ExecutionException, InterruptedException {
+		ResponseBuilder rb = getResponseBuilder(request);
+		SimpleResponse simpleResponse = new SimpleResponse();
+
+		Map<String, Object> data = rb.getConversationData();
+
+		data.clear();
+		CommonUtil.printMapData(data);
+
+		simpleResponse
+				.setTextToSpeech("<speak>"
+						+ "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/%EC%98%A4%ED%88%AC%EC%98%A4%20fallback.mp3?alt=media&amp;token=41f5c972-30be-424b-bb1d-39e10736d84b\"></audio>"
+						+ "</speak>")
+				.setDisplayText("오투오의 Fallback입니다!");
+
+
+		data.put("command", "FALLBACK");
+
+		return rb.add(new SimpleResponse().setTextToSpeech("Fallback 입니다")).add(new HtmlResponse().setUpdatedState(data)).build();
+	}
 }
 
 
