@@ -114,12 +114,16 @@ public class OdduApp extends DialogflowApp {
 		data.clear();
 		CommonUtil.printMapData(data);
 
+		simpleResponse
+			.setTextToSpeech("<speak>"
+				+ "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2Fo2o_info.mp3?alt=media&amp;token=8ae3c1e8-1392-40c9-9c18-5e8781f3cd72\"></audio>"
+				+ "</speak>")
+			.setDisplayText("오투오의 info입니다!");
+		
 		data.put("command", "INFO");
-		return rb.add(new SimpleResponse().setTextToSpeech("INFO입니다")).add(new HtmlResponse().setUpdatedState(data)).build();
-
+		
+		return rb.add(simpleResponse).add(new HtmlResponse().setUpdatedState(data)).build();
 	}
-
-
 
 
 
@@ -132,12 +136,53 @@ public class OdduApp extends DialogflowApp {
 
 		data.clear();
 		CommonUtil.printMapData(data);
+		String input = CommonUtil.makeSafeString(request.getParameter("Information"));
+        if(!CommonUtil.isEmptyString(input) && input.equals("Address") || input.equals("Homepage") || input.equals("Contact") || input.equals("Established") || input.equals("Prize")) {
+
+		  if (input.equals("Address")) {
+		  	simpleResponse
+					.setTextToSpeech("<speak>"
+							  + "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2F02_%EC%9A%B0%EB%A6%AC_%ED%9A%8C%EC%82%AC_%EC%A3%BC%EC%86%8C%EB%8A%94_%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%84%9C%EC%B4%88%EA%B5%AC_%EB%A7%A4%ED%97%8C%EB%A1%9C8%EA%B8%B8_47_%EC%96%91%EC%9E%AC_%EC%97%90%EC%9D%B4%EC%95%84%EC%9D%B4%ED%97%88%EB%B8%8C_%ED%9D%AC%EA%B2%BD%EB%B9%8C%EB%94%A9_B%EB%8F%99_2.mp3?alt=media&token=ba0f84ed-ecef-44b8-93dc-ffe3fcd5ce0a\"></audio>"
+							  + "</speak>")
+					.setDisplayText("우리 회사 주소는  \n" +
+							  "서울특별시 서초구 매헌로 8길 47번지,  \n" +
+							  "양재 AI 허브 희경빌딩 B동 203호야!");
+
+		  } else if (input.equals("Homepage")) {
+			  simpleResponse
+					  .setTextToSpeech("<speak>"
+							  + "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2F03_%EC%9A%B0%EB%A6%AC_%ED%9A%8C%EC%82%AC%EC%9D%98_%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%95%BC.mp3?alt=media&amp;token=e2f53074-1977-476c-ba34-a331e768a4b1\"></audio>"
+							  + "</speak>")
+					  .setDisplayText("우리 회사의 홈페이지야!");
+
+		  } else if (input.equals("Contact")) {
+			  simpleResponse
+					  .setTextToSpeech("<speak>"
+							  + "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2F04_%EC%9A%B0%EB%A6%AC_%ED%9A%8C%EC%82%AC%EC%9D%98_%EC%97%B0%EB%9D%BD%EC%B2%98%EC%95%BC.mp3?alt=media&amp;token=ee67b529-7500-463a-91be-e5f75d1a0532\"></audio>"
+							  + "</speak>")
+					  .setDisplayText("우리 회사의 연락처야!");
+
+		  } else if (input.equals("Established")) {
+			  simpleResponse
+					  .setTextToSpeech("<speak>"
+							  + "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2F05_%EC%9A%B0%EB%A6%AC_%ED%9A%8C%EC%82%AC%EC%9D%98_%EC%84%A4%EB%A6%BD%EC%9D%BC%EC%9D%80_2017%EB%85%84_8%EC%9B%94_16%EC%9D%BC%EC%9D%B4%EC%95%BC.mp3?alt=media&amp;token=ef47d3b3-b4ef-4290-87aa-eec561037137\"></audio>"
+							  + "</speak>")
+					  .setDisplayText("우리 회사의 설립일은  \n" +
+							  "2017년 8월 16일이야!");
+
+		  } else if (input.equals("History")) {
+			  simpleResponse
+					  .setTextToSpeech("<speak>"
+							  + "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2F06_%EC%9A%B0%EB%A6%AC_%ED%9A%8C%EC%82%AC%EC%9D%98_%EC%97%B0%ED%98%81%EA%B3%BC_%EC%88%98%EC%83%81%EC%9D%B4%EB%A0%A5%EC%9D%B4%EC%95%BC.mp3?alt=media&amp;token=6871b8fc-ba5f-4643-ac5e-26e4659834bd\"></audio>"
+							  + "</speak>")
+					  .setDisplayText("우리 회사의 연혁과 수상이력이야!");
+		  }
+	  }
 
 		data.put("command", "INFOTEL");
-		return rb.add(new SimpleResponse().setTextToSpeech("INFOTEL입니다")).add(new HtmlResponse().setUpdatedState(data)).build();
-
-
+		return rb.add(simpleResponse).add(new HtmlResponse().setUpdatedState(data)).build();
 	}
+
 
 
 
@@ -162,7 +207,7 @@ public class OdduApp extends DialogflowApp {
 
 		data.put("command", "FALLBACK");
 
-		return rb.add(new SimpleResponse().setTextToSpeech("Fallback 입니다")).add(new HtmlResponse().setUpdatedState(data)).build();
+		return rb.add(simpleResponse).add(new HtmlResponse().setUpdatedState(data)).build();
 	}
 }
 
