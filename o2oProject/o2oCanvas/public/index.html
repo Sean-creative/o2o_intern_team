@@ -3,80 +3,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=0.5">
   <title> 오뚜 프로젝트 </title>
-  <link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;,">
+  <link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;">
 
   <script src="https://www.gstatic.com/assistant/interactivecanvas/api/interactive_canvas.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 
   <link rel="stylesheet" href="css/main.css">
-
-  <script>
-    $('#address').click(function(){
-      $('#hi').hide();
-      $('#greeting').hide();
-      $('#aog').hide();
-      $('#info').hide();
-      $('#info_OPTION').show();
-      $('#addressDiv').show();
-      $('#prizeDiv').hide();
-      $('#establishDiv').hide();
-      $('#homepageDiv').hide();
-      $('#contactDiv').hide();
-    });
-    $('#prize').click(function(){
-      $('#hi').hide();
-      $('#greeting').hide();
-      $('#aog').hide();
-      $('#info').hide();
-      $('#info_OPTION').show();
-      $('#addressDiv').hide();
-      $('#prizeDiv').show();
-      $('#establishDiv').hide();
-      $('#homepageDiv').hide();
-      $('#contactDiv').hide();
-    });
-    $('#establish').click(function(){
-      $('#hi').hide();
-      $('#greeting').hide();
-      $('#aog').hide();
-      $('#info').hide();
-      $('#info_OPTION').show();
-      $('#addressDiv').hide();
-      $('#prizeDiv').hide();
-      $('#establishDiv').show();
-      $('#homepageDiv').hide();
-      $('#contactDiv').hide();
-    });
-    $('#homepage').click(function(){
-      $('#hi').hide();
-      $('#greeting').hide();
-      $('#aog').hide();
-      $('#info').hide();
-      $('#info_OPTION').show();
-      $('#addressDiv').hide();
-      $('#prizeDiv').hide();
-      $('#establishDiv').hide();
-      $('#homepageDiv').show();
-      $('#contactDiv').hide();
-    });
-    $('#contact').click(function(){
-      $('#hi').hide();
-      $('#greeting').hide();
-      $('#aog').hide();
-      $('#info').hide();
-      $('#info_OPTION').show();
-      $('#addressDiv').hide();
-      $('#prizeDiv').hide();
-      $('#establishDiv').hide();
-      $('#homepageDiv').hide();
-      $('#contactDiv').show();
-
-  </script>
 </head>
 
 <body style="margin:0px;">
-<!-- onload="onLoadHandler()" onresize="onLoadHandler()" -->
-
 
   <div id="HI"  class="INTENT" >
     <img src="image/HI/배경1.png" width="100%" height="100%">
@@ -201,30 +136,31 @@
 
 
 
-
-
-
-  <div id="INFO" class="INTENT">
+<div id="INFO" class="INTENT">
     <img src="image/INFO/배경4.png" width="100%" height="100%">
-    <div id="oddu_INFO">
-      <img src="image/오뚜.png" width="100%" height="100%">
+
+    <div id="oddu_INFO" >
+      <img src="image/오뚜.png" width="100%" height="100%" style="margin:0px 50px 0px;">
     </div>
 
 
     <div id="folder_INFO" >
-     <img src="image/INFO/folder.png" width="100%" height="100%"  >
+     <img src="image/INFO/folder.png" width="90%" height="100%"  style="margin:0px 20px 0px;">
+
+
+     <div id="information1_INFO" >
+       <img id="address_INFO" class="option_INFO"  onclick="addressButtton()" src="image/INFO/address.png" style="top:-280; width:70; height:70; margin:3px;" />
+       <img  id="prize_INFO" class="option_INFO" src="image/INFO/prize.png"    onclick="prizeButton()" width="100%" height="100%"/>
+       <img id="establish_INFO" class="option_INFO" onclick="establishButton()" src="image/INFO/establish.png" style="top:-280; width:70; height:70; margin:3px;" />
+     </div>
+
+     <div id="information2_INFO">
+       <img id="homepage_INFO" class="option_INFO" src="image/INFO/homepage.png" style="top:-280; width:70; height:70; margin:3px;" onclick="homepageButton()"/>
+       <img id="contact_INFO" class="option_INFO" src="image/INFO/contact.png" style="top:-280; width:80; height:80; margin:3px;"  onclick="contactButton()"/>
+     </div>
    </div>
 
-   <div id="information1_INFO">
-     <img src="image/INFO/address.png" style="top:-280; width:90; height:90; margin:10px;">
-     <img src="image/INFO/contact.png" style="top:-280; width:90; height:90; margin:10px;">
-     <img src="image/INFO/establish.png" style="top:-280; width:90; height:90; margin:10px;">
-   </div>
 
-   <div id="information2_INFO">
-     <img src="image/INFO/homepage.png" style="top:-280; width:90; height:90; margin:10px;">
-     <img src="image/INFO/prize.png" style="top:-280; width:90; height:90; margin:10px;">
-   </div>
 
 
 
@@ -250,31 +186,76 @@
 
 
 
- <div id="INFOTEL" class="INTENT">
-
-
-
+ <div id="INFO_OPTION" class="INTENT" >
    <img src="image/INFO/배경4.png" width="100%" height="100%">
-   <div id="oddu_INFO">
+   <div id="oddu_INFO_OPTION">
      <img src="image/오뚜.png" width="100%" height="100%">
    </div>
 
-   <div id="folder_INFO" >
+
+   <div id="folder_INFO_OPTION" >
     <img src="image/INFO/folder.png" width="100%" height="100%"  >
 
+    <div id="addressDiv_INFO_OPTION" >
+       <div style="width:280; height:150;">
+            <a href="https://map.kakao.com/?urlX=507960&urlY=1101820&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false" target="_blank">
+                <img width="280" height="150" src="https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=507960&MY=1101820&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo" style="border:1px solid #ccc">
+              </a>
+       </div>
+       <br>
+       <div style="width:280; height:150;">
+          서울특별시 서초구 매헌로8길 47
+          <br />
+          양재AI허브(희경빌딩 B동) 203호
+       </div>
+     </div>
 
+     <div id="prizeDiv_INFO_OPTION" >
+       <div style="width:280; height:150;">
+         <img width="280" height="150" src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/Awards.png?alt=media&token=cf252b00-e599-4372-b079-ea80fb028059">
+       </div>
+       <div style="width:280; height:150;">
+              2020.01.17. 관광편의 시설업 지정<br>
+              2018.10.10. 특허청장 수상<br>
+              2018.07.12. 벤처기업 인증<br>
+              2018.04.19. 기업부설연구소 설립<br>
+              2018.04.10. 무역업 등록<br>
+              2017.08.16. (주)오투오 본사 설립
+       </div>
+     </div>
+     <div id="establishDiv_INFO_OPTION" >
+       <div style="width:280; height:150;">
+         <img width="280" height="150" src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/%EC%84%A4%EB%A6%BD%EC%9D%BC.jpg?alt=media&token=96f10ce9-b06f-434a-bbed-e6bf50e04f00">
+       </div>
+       <br>
+       <div style="width:280; height:150;">
+          설립일 : 2017년 8월 16일
+       </div>
+     </div>
+     <div id="homepageDiv_INFO_OPTION" >
+       <div style="width:280; height:150;">
+         <img width="280" height="150" src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/homepage.jpg?alt=media&token=8ebf351e-248a-4eb1-84cf-7ca692f165a5">
+       </div>
+       <br>
+         <div style="width:280; height:150;">
+             <a href="https://o2o.kr">홈페이지 바로가기</a>
+         </div>
+     </div>
+     <div id="contactDiv_INFO_OPTION" >
+       <div style="width:280; height:150;">
+       <img width="280" height="150" src="https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/contact.jpg?alt=media&token=ae582d8a-a5f1-4eac-bd73-5195d3bb854f">
+       </div>
+       <br>
+       <div>
+        전화번호:
+         <a href="tel:070-4260-8310">  070-4260-8310</a>
+         <br>
+         이메일:
+         <a href="mailto:info@o2o.kr">  info@o2o.kr</a>
+       </div>
+     </div>
   </div>
 
-  <div id="information1_INFO">
-    <img src="image/INFO/address.png" style="top:-280; width:90; height:90; margin:10px;">
-    <img src="image/INFO/contact.png" style="top:-280; width:90; height:90; margin:10px;">
-    <img src="image/INFO/establish.png" style="top:-280; width:90; height:90; margin:10px;">
-  </div>
-
-  <div id="information2_INFO">
-    <img src="image/INFO/homepage.png" style="top:-280; width:90; height:90; margin:10px;">
-    <img src="image/INFO/prize.png" style="top:-280; width:90; height:90; margin:10px;">
-  </div>
 
 
 
@@ -294,13 +275,7 @@
       <img src="image/chip_Info.png" onclick="sendInfoIntent()" width="100%" height="100%" />
     </div>
     </div>
-
-
-
 </div>
-
-
-
 
 
 
@@ -336,8 +311,6 @@
     </div>
   </div>
 </div>
-
-
 
 
 

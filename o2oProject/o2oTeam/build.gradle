@@ -73,7 +73,7 @@ task('deployDev') { //release 적용은 Gradle의 Task/application/deployDev 으
 			session(remotes.webServer) {
 				put from: "${path}/${filename}", into: './'
 				execute ("sudo chown tomcat ${filename}")
-                execute ("sudo mv ${filename} /opt/dev/tomcat_d6/webapps/devsvr6.war") // ex) /opt/dev/tomcat_d4/webapps/devsvr4.war  각자할당 tomcat위치에 맞게 적어주면 됨
+                execute ("sudo mv ${filename} /opt/dev/tomcat_d7/webapps/devsvr7.war") // ex) /opt/dev/tomcat_d4/webapps/devsvr4.war  각자할당 tomcat위치에 맞게 적어주면 됨
 			}
 		}
 	}

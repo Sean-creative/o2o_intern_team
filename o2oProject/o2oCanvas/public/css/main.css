@@ -5,8 +5,8 @@ body {box-sizing: border-box;
   padding:0px;
 }
 
- /* 이걸 먼저 해줘야 처음 뜰때 하나만 나옴 안그럼 다 나왔다가 없어지면서 부자연스러움  */
-   body > div:not(#HI)   {
+/* 이걸 먼저 해줘야 처음 뜰때 하나만 나옴 안그럼 다 나왔다가 없어지면서 부자연스러움  */
+body > div:not(#HI)   {
   display: none
 }
 
@@ -22,29 +22,29 @@ body {box-sizing: border-box;
 
   float:left;
   /* float는 웹에서 4개 한번에 보고싶을 떄 쓰세요 */
- }
+}
 
 
- #suggestionChip{
-    width:412;
-    height:90;
-    position:absolute;
-    bottom:35;
-    display:flex;
-    justify-content:space-around;
-    justify-content :center;
-    z-index: 10;
- }
- #suggestionChip>div{
-   width:80px;
-   height:80px;
-   /* line-height:100px; */
-   margin:10px;
- }
- .chip {
-     border-radius: 30%;
-     overflow: hidden;
- }
+#suggestionChip{
+  width:412;
+  height:90;
+  position:absolute;
+  bottom:35;
+  display:flex;
+  justify-content:space-around;
+  justify-content :center;
+  z-index: 10;
+}
+#suggestionChip>div{
+  width:80px;
+  height:80px;
+  /* line-height:100px; */
+  margin:10px;
+}
+.chip {
+  border-radius: 30%;
+  overflow: hidden;
+}
 
 
 
@@ -54,12 +54,12 @@ body {box-sizing: border-box;
 #oddu_HI {
   position:absolute; bottom:90; width:300; height:400;
 }
- #suggestionChip_HI>div {border: 2px solid;
- width:70px;
- height:70px;
- }
+#suggestionChip_HI>div {border: 2px solid;
+  width:70px;
+  height:70px;
+}
 #speechBubble_HI {
-position:absolute;  top:110;  width:370;  height:230; display: flex;  justify-content :center;
+  position:absolute;  top:110;  width:370;  height:230; display: flex;  justify-content :center;
 }
 #suggestionChip_HI {
   width:370px; height:230px; top:27; position:absolute; display:flex; justify-content:space-around;
@@ -69,82 +69,136 @@ position:absolute;  top:110;  width:370;  height:230; display: flex;  justify-co
 
 
 
- /* 창선 */
-   #oddu_GREETING {
-     width: 130px;
-     height: 170px;
-     bottom: 200px;
-     left: 20px;
-     position: absolute;
-     z-index: 1;
-   }
-   #ceo_GREETING {
-     position:absolute; top: 170; width:230; height:400; right: 20;
-     z-index: 0;
-   }
-   #desk_GREETING {
-     position:absolute; bottom: 30; width:400; height:200; left: 0;
-     z-index: 1;
-   }
-   #mike_GREETING {
-     position:absolute; bottom:230; width:40; height:100; left: 140;
-     z-index: 2;
-   }
-   #book_GREETING {
-     position:absolute; top: 70; width:100; height:200; left: 40;
-   }
+/* 창선 */
+#oddu_GREETING {
+  width: 130px;
+  height: 170px;
+  bottom: 200px;
+  left: 20px;
+  position: absolute;
+  z-index: 1;
+}
+#ceo_GREETING {
+  position:absolute; top: 170; width:230; height:400; right: 20;
+  z-index: 0;
+}
+#desk_GREETING {
+  position:absolute; bottom: 30; width:400; height:200; left: 0;
+  z-index: 1;
+}
+#mike_GREETING {
+  position:absolute; bottom:230; width:40; height:100; left: 140;
+  z-index: 2;
+}
+#book_GREETING {
+  position:absolute; top: 70; width:100; height:200; left: 40;
+}
 
 
 
 
 
-  /* 혜원 */
-   #square{
-     display:flex;
-     justify-content:center;
-     background-color:white;
-     width:372;
-     height:400;
-     overflow:scroll;
-     position:absolute;
-     top:130;
-   }
+/* 혜원 */
+#square{
+  display:flex;
+  justify-content:center;
+  background-color:white;
+  width:372;
+  height:400;
+  overflow:scroll;
+  position:absolute;
+  top:130;
+}
 
-   .list_AOG {
-       display: flex;
-       justify-content:center;
-       margin:10;
-     }
+.list_AOG {
+  display: flex;
+  justify-content:center;
+  margin:10;
+}
 
-   .list_AOG > iframe{
-     display: flex;
-     justify-content:center;
-     border:solid 3px red;
-   }
+.list_AOG > iframe{
+  display: flex;
+  justify-content:center;
+  border:solid 3px red;
+}
 
-   #oddu_AOG{
-     position:absolute;
-     left:10;
-     top:390;
-     width:200;
-     height:250;
-   }
-
-
+#oddu_AOG{
+  position:absolute;
+  left:10;
+  top:390;
+  width:200;
+  height:250;
+}
 
 
- /* 제현 */
+
+
+/* 제현 - INFO */
 #oddu_INFO {
-  position:absolute; top:50; width:300; height:400;
+  position:absolute;
+  top:50;
+  width:300;
+  height:400;
+  left:25;
 }
 #folder_INFO {
-  position:absolute; bottom:150; width:380; height:280;
+  position:absolute;
+  bottom:150;
+  width:380;
+  height:280;
 }
 #information1_INFO {
-  position:absolute; bottom:270; width:380; height:140;  display: flex;  justify-content :center;  align-items: center;
+  position:absolute;
+  bottom:120;
+  width:380;
+  height:140;
+  display: flex;
+  justify-content :center;
+  align-items: center;
 }
 #information2_INFO {
-  position:absolute; bottom:160; width:380; height:140;  display: flex;  justify-content :center;  align-items: center;
+  position:absolute;
+  bottom:10;
+  width:380;
+  height:140;
+  display: flex;
+  justify-content :center;
+  align-items: center;
+}
+#prize_INFO {
+  top:-280;
+  width:70;
+  height:70;
+  margin:3px;
+}
+
+
+
+/* 제현  - INFO_OPTION */
+#oddu_INFO_OPTION {
+  position:absolute;
+  top:50;
+  width:300;
+  height:400;
+}
+
+#folder_INFO_OPTION {
+  position:absolute;
+  bottom:150;
+  width:330;
+  height:380;
+}
+
+
+#folder_INFO_OPTION > div {
+  position:absolute;
+  left: 25;
+  top:70;
+  width:280;
+  height:300;
+  display:block;
+  justify-content :center;
+  text-align:center;
 }
 
 
@@ -155,12 +209,12 @@ position:absolute;  top:110;  width:370;  height:230; display: flex;  justify-co
   position:absolute; bottom:90; width:300; height:400;
 }
 #speechBubble_FALLBACK {
-position:absolute;  top:110;  width:370;  height:230; display: flex;  justify-content :center;
+  position:absolute;  top:110;  width:370;  height:230; display: flex;  justify-content :center;
 }
 #suggestionChip_FALLBACK {
   width:370px; height:230px; top:27; position:absolute; display:flex; justify-content:space-around;
 }
- #suggestionChip_FALLBACK>div {border: 2px solid;
- width:70px;
- height:70px;
- }
+#suggestionChip_FALLBACK>div {border: 2px solid;
+  width:70px;
+  height:70px;
+}

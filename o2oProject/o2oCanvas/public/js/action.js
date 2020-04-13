@@ -26,13 +26,14 @@ class Action {
    * @param {*} scene which serves as a container of all visual elements
    */
   constructor(scene) {
+
     this.canvas = window.interactiveCanvas;
     this.scene = scene;
     const that = this;
     this.commands = {
       HI:function(data) {
         console.log("command : " + data.command);
-        console.log(" 변경한 시간은 1:20 이다.");
+        console.log(" 변경한 시간은 11:29 이다.");
 
         apply(data);
 
@@ -58,11 +59,32 @@ class Action {
         // setLoadHandler("bg");
       },
 
-      INFOTEL:function(data) {
+      ADDRESSDIV_INFO_OPTION:function(data) {
         console.log("command : " + data.command);
-        apply(data);
+        apply_option(data);
         // setLoadHandler("bg");
       },
+    HOMEPAGEDIV_INFO_OPTION:function(data) {
+        console.log("command : " + data.command);
+        apply_option(data);
+        // setLoadHandler("bg");
+      },
+      CONTACTDIV_INFO_OPTION:function(data) {
+        console.log("command : " + data.command);
+        apply_option(data);
+        // setLoadHandler("bg");
+      },
+    ESTABLISHDIV_INFO_OPTION:function(data) {
+        console.log("command : " + data.command);
+        apply_option(data);
+        // setLoadHandler("bg");
+      },
+    PRIZEDIV_INFO_OPTION:function(data) {
+        console.log("command : " + data.command);
+        apply_option(data);
+        // setLoadHandler("bg");
+      },
+
 
       FALLBACK:function(data) {
         console.log("command : " + data.command);
