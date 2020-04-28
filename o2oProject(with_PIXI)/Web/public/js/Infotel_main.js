@@ -15,7 +15,7 @@ class Scene {
       height: 773
     });
     document.body.appendChild(screens.view);
-
+    //버튼이미지 load
     this.Unclick_chip_Home = PIXI.Texture.from('./image/chip_Home.png');
     this.Click_chip_Home = PIXI.Texture.from('./image/click_chip_Home.png');
     this.Unclick_chip_Greeting = PIXI.Texture.from('./image/chip_Greeting.png');
@@ -35,9 +35,9 @@ class Scene {
     this.Infotel_background = PIXI.Sprite.from('image/INFO/background.png');
     this.Infotel_background.width = screens.screen.width;
     this.Infotel_background.height = screens.screen.height;
-
     this.Infotel_container.addChild(this.Infotel_background);
 
+    //infotel이미지 load
     this.Infotel_oddu = PIXI.Sprite.from('./image/INFO/1_oddu.png');
     this.Infotel_memo = PIXI.Sprite.from('./image/INFO/memo.png');
     this.Infotel_folder = PIXI.Sprite.from('./image/INFO/folder.png');
@@ -53,6 +53,7 @@ class Scene {
     this.Infotel_chip_Aog = new PIXI.Sprite(this.Unclick_chip_Aog);
     this.Infotel_chip_Info = new PIXI.Sprite(this.Unclick_chip_Info);
 
+    //이미지 배치
     this.Infotel_oddu.width = 280;
     this.Infotel_oddu.height = 355;
     this.Infotel_oddu.anchor.set(0.5);
@@ -101,6 +102,7 @@ class Scene {
     this.Infotel_email.x = screens.screen.width / 2 + 80;
     this.Infotel_email.y = 490 - 130;
 
+    //텍스트 배치
     this.Infotel_prizeText = new PIXI.Text('2020.01.17. 관광편의 시설업 지정\n2018.10.10. 특허청장 수상\n2018.07.12. 벤처기업 인증\n2018.04.19. 기업부설연구소 설립\n2018.04.10. 무역업 등록\n2017.08.16. (주)오투오 본사 설립', {
       fontSize: 18
     });
@@ -179,7 +181,7 @@ class Scene {
     this.Infotel_address.interactive = true;
     this.Infotel_address.buttonMode = true;
 
-
+    //버튼 액션
     this.Infotel_chip_Home.on('pointerdown', () => {
       this.Infotel_chip_Home.texture = this.Click_chip_Home;
 
