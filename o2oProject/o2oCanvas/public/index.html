@@ -1,17 +1,28 @@
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=0.5">
   <title> 오뚜 프로젝트 </title>
   <link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;">
+<link rel="stylesheet" href="css/main.css">
+  <!-- <script src="https://www.gstatic.com/assistant/interactivecanvas/api/interactive_canvas.min.js"></script> -->
+  <!-- <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script> -->
 
-  <script src="https://www.gstatic.com/assistant/interactivecanvas/api/interactive_canvas.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 
-  <link rel="stylesheet" href="css/main.css">
+
+  <!-- <style>
+  canvas {
+  display: block;
+background: red;}
+</style> -->
+
 </head>
 
 <body style="margin:0px;">
+  <!-- <canvas id="mycanvas"></canvas>
+<script src="pixi/pixi.min.js"></script> -->
+
 
   <div id="HI"  class="INTENT" >
     <img src="image/HI/배경1.png" width="100%" height="100%">
@@ -23,9 +34,13 @@
     <div id="speechBubble_HI">
       <img src="image/HI/말풍선.png" width="100%" height="100%" />
 
-      <div id="suggestionChip_HI">
+
+
+
+
+      <div id="suggestionChip_HI">   //HI_suggestionChip  도 가능 
         <div class="chip">
-          <img src="image/chip_Home.png" onclick="sendWelcomeIntent()" width="100%" height="100%" />
+          <img id="chip2" src="image/chip_Home.png" onclick="sendWelcomeIntent()" width="100%" height="100%" />
         </div>
         <div class="chip">
           <img src="image/chip_Greeting.png" onclick="sendGreetingIntent()" width="100%" height="100%" />
@@ -36,6 +51,21 @@
         <div class="chip">
           <img src="image/chip_Info.png" onclick="sendInfoIntent()" width="100%" height="100%" />
         </div>
+
+
+        <!-- <script type="text/javascript">
+  // const canvas = document.getElementById("mycanvas");
+     const chip2 = document.getElementById("chip2");
+        const app = new PIXI.Application( {
+          view : canvas,
+          width : 300,
+          height : 400
+        });
+        // const texture = PIXI.Texture.from('sad1.png');
+        chip2. width = 50;
+        app.stage.addChild(texture);
+        </script> -->
+
       </div>
     </div>
   </div>
