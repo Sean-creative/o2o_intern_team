@@ -20,7 +20,8 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 public class internexApp extends DialogflowApp {
-
+	
+	//시작 페이지 intent
 	@ForIntent("Default Welcome Intent")
 	public ActionResponse defaultWelcome(ActionRequest request) throws ExecutionException, InterruptedException {
 		ResponseBuilder rb = getResponseBuilder(request);
@@ -29,22 +30,27 @@ public class internexApp extends DialogflowApp {
 
 		data.clear();
 		CommonUtil.printMapData(data);
-
+		
+		//오뚜 인사말 음성 출력
 		simpleResponse.setTextToSpeech("<speak>"
 						+ "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2Fwelcome_default_intent.mp3?alt=media&amp;token=a1b413ad-6bb3-4fa0-8061-d089c16c9765\"></audio>"
 						+ "</speak>")
 				.setDisplayText("오투오의 등장!");
+		//디바이스가 interactive canvas를 지원하지 않을 경우
 		if (!request.hasCapability("actions.capability.INTERACTIVE_CANVAS")) {
 			return rb.add(new SimpleResponse().setTextToSpeech("지원하지않습니다.")).endConversation().build();
 		} else {
+			//디바이스가 interactive canvas를 지원하면 HI 명령을 보낸다.
 			data.put("command", "HI");
-
+			
+			//interactive canvas에 해당 페이지를 사용해 HTML응답을 보내고 명령 전달
 			return rb.add(simpleResponse).add(new HtmlResponse().setUrl("https://intern-ex.firebaseapp.com")
 					.setUpdatedState(data)).build();
 
 	}
 	}
-
+	
+	//사용자의 명령을 인식하지 못했을 경우에 실행되는 intent
 	@ForIntent("Default Fallback Intent")
 	public ActionResponse defaultFallback(ActionRequest request) throws ExecutionException, InterruptedException {
 		ResponseBuilder rb = getResponseBuilder(request);
@@ -54,19 +60,22 @@ public class internexApp extends DialogflowApp {
 
 		data.clear();
 		CommonUtil.printMapData(data);
-
+		
+		//오뚜의 Fallback 음성 출력
 		simpleResponse
 				.setTextToSpeech("<speak>"
 						+ "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/%EC%98%A4%ED%88%AC%EC%98%A4%20fallback%20%EC%B5%9C%EC%A2%85.mp3?alt=media&amp;token=aac5c1e0-4ac1-4ebd-bbce-a8c649cb6033\"></audio>"
 						+ "</speak>")
 				.setDisplayText("오투오의 Fallback입니다!");
 
-
+		//FALLBACK 명령어를 interactive canvas로 전달
 		data.put("command", "FALLBACK");
-
+		
+		//interactive canvas에 해당 페이지를 사용해 HTML응답을 보내고 명령 전달
 		return rb.add(simpleResponse).add(new HtmlResponse().setUrl("https://intern-ex.firebaseapp.com").setUpdatedState(data)).build();
 	}
-
+	
+	//오투오 소개 intent
 	@ForIntent("O2O_greeting")
 	public ActionResponse O2O_greeting(ActionRequest request) throws ExecutionException, InterruptedException {
 		ResponseBuilder rb = getResponseBuilder(request);
@@ -76,7 +85,8 @@ public class internexApp extends DialogflowApp {
 
 		data.clear();
 		CommonUtil.printMapData(data);
-
+		
+		//오뚜 음성과 대표님 음성을 순서대로 출력
 		simpleResponse
 				.setTextToSpeech("<speak>"
 						+ "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2F%EC%98%A4%EB%9A%9C%EC%9D%98%20%EC%86%8C%EA%B0%9C.mp3?alt=media&amp;token=24a8462c-dae2-4276-bbce-3cd1de0f48cb\"></audio>"
@@ -86,13 +96,15 @@ public class internexApp extends DialogflowApp {
 				.setDisplayText("우리 회사의 안성민 대표님이 잘 소개해주실꺼야!");
 
 
-
+		//interactive canvas에 GREETING 명령 전달
 		data.put("command", "GREETING");
-
-			return rb.add(simpleResponse).add(new HtmlResponse().setUrl("https://intern-ex.firebaseapp.com").setUpdatedState(data)).build();
+		
+		//interactive canvas에 해당 페이지를 사용해 HTML응답을 보내고 명령 전달
+		return rb.add(simpleResponse).add(new HtmlResponse().setUrl("https://intern-ex.firebaseapp.com").setUpdatedState(data)).build();
 
 		}
-
+	
+	//오투오의 AoG 소개 intent
 	@ForIntent("O2O_aog")
 	public ActionResponse O2O_aog(ActionRequest request) throws ExecutionException, InterruptedException {
 		ResponseBuilder rb = getResponseBuilder(request);
@@ -102,18 +114,23 @@ public class internexApp extends DialogflowApp {
 
 		data.clear();
 		CommonUtil.printMapData(data);
+		
+		//오뚜 AoG 소개 음성 출력
 		simpleResponse
 				.setTextToSpeech("<speak>"
 						+ "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2Fo2o_aog.mp3?alt=media&amp;token=47455549-6a8c-4d49-a103-b64aa32f9843\"></audio>"
 						+ "</speak>")
 				.setDisplayText("오투오의 aog입니다!");
 
-
+		//interactive canvas로 AOG 명령 전달
 		data.put("command", "AOG");
-
+		
+		//interactive canvas에 해당 페이지를 사용해 HTML응답을 보내고 명령 전달
+		//다시 interactive canvas로 돌아올 수 있도록 하기 위해 서로 다른 html 파일을 사용
 		return rb.add(simpleResponse).add(new HtmlResponse().setUrl("https://intern-ex.firebaseapp.com/Aog.html").setUpdatedState(data)).build();
 	}
-
+	
+	//오투오 기본정보 소개 intent
 	@ForIntent("O2O_info")
 	public ActionResponse O2O_info(ActionRequest request) throws ExecutionException, InterruptedException {
 		ResponseBuilder rb = getResponseBuilder(request);
@@ -123,21 +140,24 @@ public class internexApp extends DialogflowApp {
 
 		data.clear();
 		CommonUtil.printMapData(data);
-
+		
+		//오뚜 기본정보 음성 출력
 		simpleResponse
 				.setTextToSpeech("<speak>"
 						+ "<audio src=\"https://firebasestorage.googleapis.com/v0/b/o2o-intern-nfumup.appspot.com/o/dubbing%2Fo2o_info.mp3?alt=media&amp;token=8ae3c1e8-1392-40c9-9c18-5e8781f3cd72\"></audio>"
 						+ "</speak>")
 				.setDisplayText("우리 회사의 기본정보 목록이야!  \n"
 						+ "궁금한게 있으면 골라봐!");
-
+		
+		//interactive canvas로 INFO 명령 전달
 		data.put("command", "INFO");
-
+		
+		//interactive canvas에 해당 페이지를 사용해 HTML응답을 보내고 명령 전달
 		return rb.add(simpleResponse).add(new HtmlResponse().setUrl("https://intern-ex.firebaseapp.com").setUpdatedState(data)).build();
 
 	}
 
-
+	//기본정보에서 상세 정보 선택 시 정보를 보여주는 intent
 	@ForIntent("INFOTEL")
 	public ActionResponse INFOTEL(ActionRequest request) throws ExecutionException, InterruptedException {
 		ResponseBuilder rb = getResponseBuilder(request);
@@ -148,12 +168,13 @@ public class internexApp extends DialogflowApp {
 		data.clear();
 		CommonUtil.printMapData(data);
 
-
+		//사용자의 음성을 text로 저장
 		String input = CommonUtil.makeSafeString(request.getRawText());
-
+		
+		//입력받은 text가 해당 내용을 포함하고 있을 때 각각에 맞는 정보를 보여줌
 		if (!CommonUtil.isEmptyString(input) && input.contains("주소") || input.contains("홈페이지") || input.contains("연락처") || input.contains("설립") || input.contains("연혁") || input.contains("수상")
 				|| input.contains("수상내역") || input.contains("수상이력") || input.contains("전화번호") || input.contains("번호") || input.contains("메일") || input.contains("이메일")) {
-			if (input.contains("주소")) {//한글 영어로 고쳐야함 - 제현
+			if (input.contains("주소")) {//주소 선택 시 이에 맞는 음성을 출력하고 명령 전달
 				data.put("command", "ADDRESSDIV_INFO_OPTION");
 				simpleResponse
 						.setTextToSpeech("<speak>"
@@ -163,7 +184,7 @@ public class internexApp extends DialogflowApp {
 								"서울특별시 서초구 매헌로 8길 47번지,  \n" +
 								"양재 AI허브 희경빌딩 B동 203호야!");
 
-			} else if (input.contains("홈페이지")) {
+			} else if (input.contains("홈페이지")) {//홈페이지 선택 시 이에 맞는 음성을 출력하고 명령 전달
 				data.put("command", "HOMEPAGEDIV_INFO_OPTION");
 				simpleResponse
 						.setTextToSpeech("<speak>"
@@ -172,6 +193,7 @@ public class internexApp extends DialogflowApp {
 						.setDisplayText("우리 회사의 홈페이지야!");
 
 			} else if (input.contains("연락처") || input.contains("전화번호") || input.contains("번호") || input.contains("메일") || input.contains("이메일")) {
+				////연락처 선택 시 이에 맞는 음성을 출력하고 명령 전달
 				data.put("command", "CONTACTDIV_INFO_OPTION");
 				simpleResponse
 						.setTextToSpeech("<speak>"
@@ -180,6 +202,7 @@ public class internexApp extends DialogflowApp {
 						.setDisplayText("우리 회사의 연락처야!");
 
 			} else if (input.contains("설립")) {
+				//설립일 선택 시 이에 맞는 음성을 출력하고 명령 전달
 				data.put("command", "ESTABLISHDIV_INFO_OPTION");
 				simpleResponse
 						.setTextToSpeech("<speak>"
@@ -189,6 +212,7 @@ public class internexApp extends DialogflowApp {
 								"2017년 8월 16일이야!");
 
 			} else if (input.contains("연혁") || input.contains("수상") || input.contains("수상내역") || input.contains("수상이력")) {
+				//수상내역 선택 시 이에 맞는 음성을 출력하고 명령 전달
 				data.put("command", "PRIZEDIV_INFO_OPTION");
 				simpleResponse
 						.setTextToSpeech("<speak>"
@@ -197,6 +221,9 @@ public class internexApp extends DialogflowApp {
 						.setDisplayText("우리 회사의 연혁과 수상이력이야!");
 			}
 		}
+		
+		//interactive canvas에 해당 페이지를 사용해 HTML응답을 보내고 명령 전달
+		//다시 interactive canvas로 돌아올 수 있도록 하기 위해 서로 다른 html 파일을 사용
 		return rb.add(simpleResponse).add(new HtmlResponse().setUrl("https://intern-ex.firebaseapp.com/Infotel.html").setUpdatedState(data)).build();
 	}
 }
