@@ -16,6 +16,7 @@ class Scene {
     });
     document.body.appendChild(screens.view);
 
+    //버튼 이미지 load
     this.Unclick_chip_Home = PIXI.Texture.from('./image/chip_Home.png');
     this.Click_chip_Home = PIXI.Texture.from('./image/click_chip_Home.png');
     this.Unclick_chip_Greeting = PIXI.Texture.from('./image/chip_Greeting.png');
@@ -26,13 +27,13 @@ class Scene {
     this.Unclick_chip_Info = PIXI.Texture.from('./image/chip_Info.png');
     this.Click_chip_Info = PIXI.Texture.from('./image/click_chip_Info.png');
 
-    //Aog_intent
 
+/////////////////////Aog_intent
 
     this.Aog_container = new PIXI.Container();
     screens.stage.addChild(this.Aog_container);
-//    this.Aog_container.visible = false;
 
+    //이미지 load
     this.Aog_background = PIXI.Sprite.from('image/aog/background.png');
     this.Aog_background.width = screens.screen.width;
     this.Aog_background.height = screens.screen.height;
@@ -49,6 +50,8 @@ class Scene {
     this.Aog_1 = PIXI.Sprite.from('./image/aog/image1.png');
     this.Aog_2 = PIXI.Sprite.from('./image/aog/image2.png');
 
+
+    //이미지 배치
     this.Aog_ottu.scale.set(0.2, 0.2);
     this.Aog_ottu.anchor.set(0.5);
     this.Aog_ottu.x = 100;
@@ -118,6 +121,7 @@ class Scene {
     this.Aog_2.buttonMode = true;
 
 
+    //버튼 액션
     this.Aog_1.on('pointerdown', () => {
       //const that = this;
       console.log('aogvideo');
@@ -201,6 +205,8 @@ class Scene {
     this.Aog_container.addChild(this.Aog_chip_Info);
     this.Aog_container.addChild(this.Aog_chip_Home);
 
+
+    //오뚜 액션리스너
     this.hello = 0;
     this.swing = 0;
 
