@@ -205,15 +205,20 @@ class Scene {
 
     /////////////////////////////////FALLBACK intent
 
+    // fallback container 생성
+    // screens에 fallback container 추가
     this.Fallback_container = new PIXI.Container();
     this.Fallback_container.visible = false;
     screens.stage.addChild(this.Fallback_container);
 
+    // fallback background에 이미지 업로드 및 크기 조정
+    // fallback background를 container에 추가
     this.Fallback_background = PIXI.Sprite.from('image/FALLBACK/background.png');
     this.Fallback_background.width = screens.screen.width;
     this.Fallback_background.height = screens.screen.height;
     this.Fallback_container.addChild(this.Fallback_background);
 
+    // fallback chip, bubble, shadow 이미지 sprite 객체로 변환
     this.Fallback_chip_Home = new PIXI.Sprite(this.Unclick_chip_Home);
     this.Fallback_chip_Greeting = new PIXI.Sprite(this.Unclick_chip_Greeting);
     this.Fallback_chip_Aog = new PIXI.Sprite(this.Unclick_chip_Aog);
@@ -221,6 +226,7 @@ class Scene {
     this.Fallback_bubble = PIXI.Sprite.from('./image/HI/bubble.png');
     this.Fallback_shadow = PIXI.Sprite.from('./image/FALLBACK/ottu_shadow.png');
 
+    // 생성한 sprite 객체의 위치 조절
     this.Fallback_chip_Home.x = 37;
     this.Fallback_chip_Home.y = 110;
     this.Fallback_chip_Greeting.x = 127;
@@ -230,6 +236,7 @@ class Scene {
     this.Fallback_chip_Info.x = 307;
     this.Fallback_chip_Info.y = 110;
 
+    // 생성한 sprite 객체의 크기 조절
     this.Fallback_chip_Home.width = 70;
     this.Fallback_chip_Home.height = 70;
     this.Fallback_chip_Greeting.width = 70;
@@ -244,12 +251,14 @@ class Scene {
     this.Fallback_bubble.x = 21;
     this.Fallback_bubble.y = 80;
 
+    // scale로 크기 설정 및 anchor로 원점 설정
     this.Fallback_shadow.scale.set(0.4, 0.3);
     this.Fallback_shadow.anchor.set(0.5);
     this.Fallback_shadow.x = 205;
     this.Fallback_shadow.y = 647;
 
-
+    // button 이벤트에 반응할 수 있도록 대화형으로 ture로 설정
+    // Sprite의 버튼 모드를 지정
     this.Fallback_chip_Home.interactive = true;
     this.Fallback_chip_Home.buttonMode = true;
     this.Fallback_chip_Greeting.interactive = true;
@@ -259,6 +268,7 @@ class Scene {
     this.Fallback_chip_Info.interactive = true;
     this.Fallback_chip_Info.buttonMode = true;
 
+    // 각 sprite를 fallback container에 추가
     this.Fallback_container.addChild(this.Fallback_bubble);
     this.Fallback_container.addChild(this.Fallback_chip_Home);
     this.Fallback_container.addChild(this.Fallback_chip_Greeting);
@@ -266,9 +276,9 @@ class Scene {
     this.Fallback_container.addChild(this.Fallback_chip_Info);
     this.Fallback_container.addChild(this.Fallback_shadow);
 
+    // home chip을 눌렀을 경우
     this.Fallback_chip_Home.on('pointerdown', () => {
       this.Fallback_chip_Home.texture = this.Click_chip_Home;
-
       const that = this;
       console.log(`안녕`);
       that.action.canvas.sendTextQuery('안녕')
@@ -281,7 +291,7 @@ class Scene {
         });
     });
 
-
+    // greeting chip을 눌렀을 경우
     this.Fallback_chip_Greeting.on('pointerdown', () => {
       this.Fallback_chip_Greeting.texture = this.Click_chip_Greeting;
       const that = this;
@@ -296,6 +306,7 @@ class Scene {
         });
     });
 
+    // aog chip을 눌렀을 경우
     this.Fallback_chip_Aog.on('pointerdown', () => {
       this.Fallback_chip_Aog.texture = this.Click_chip_Aog;
       const that = this;
@@ -310,6 +321,7 @@ class Scene {
         });
     });
 
+    // info chip을 눌렀을 경우
     this.Fallback_chip_Info.on('pointerdown', () => {
       this.Fallback_chip_Info.texture = this.Click_chip_Info;
       const that = this;
@@ -324,8 +336,9 @@ class Scene {
         });
     });
 
-
-
+    /** 오뚜 우는 이미지 texture로 변환한 후 
+    swap하여 나타날 이미지를 넣은 Fallback_sprite 객체 생성,
+    Fallback_sprite 크기 및 위치 조절 및 container에 추가 **/
     this.Fallback_texture = PIXI.Texture.from('./image/FALLBACK/oddu_cry1.png');
     this.Fallback_secondTexture = PIXI.Texture.from('./image/FALLBACK/oddu_cry2.png');
     this.Fallback_thirdTexture = PIXI.Texture.from('./image/FALLBACK/oddu_cry3.png');
@@ -337,9 +350,9 @@ class Scene {
     this.Fallback_sprite.y = 445;
     this.Fallback_container.addChild(this.Fallback_sprite);
 
+    // 오뚜 우는 이미지 swap
     this.Fallback = 0;
     this.time = 0;
-
     screens.ticker.add(() => {
       if (this.time <= 3) {
         if (this.Fallback <= 30) {
